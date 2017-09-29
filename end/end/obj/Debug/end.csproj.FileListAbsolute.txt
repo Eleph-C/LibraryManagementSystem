@@ -1,0 +1,71 @@
+c:\users\eleph-c\documents\visual studio 2013\Projects\end\end\bin\Debug\end.exe.config
+c:\users\eleph-c\documents\visual studio 2013\Projects\end\end\bin\Debug\end.exe
+c:\users\eleph-c\documents\visual studio 2013\Projects\end\end\bin\Debug\end.pdb
+c:\users\eleph-c\documents\visual studio 2013\Projects\end\end\obj\Debug\end.csprojResolveAssemblyReference.cache
+c:\users\eleph-c\documents\visual studio 2013\Projects\end\end\obj\Debug\end.Form1.resources
+c:\users\eleph-c\documents\visual studio 2013\Projects\end\end\obj\Debug\end.Properties.Resources.resources
+c:\users\eleph-c\documents\visual studio 2013\Projects\end\end\obj\Debug\end.csproj.GenerateResource.Cache
+c:\users\eleph-c\documents\visual studio 2013\Projects\end\end\obj\Debug\end.exe
+c:\users\eleph-c\documents\visual studio 2013\Projects\end\end\obj\Debug\end.pdb
+C:\Users\Eleph-C\documents\visual studio 2013\Projects\end\end\obj\Debug\end.list.resources
+C:\Users\Eleph-C\documents\visual studio 2013\Projects\end\end\obj\Debug\end.user.resources
+C:\Users\Eleph-C\documents\visual studio 2013\Projects\end\end\obj\Debug\end.login.resources
+C:\Users\Eleph-C\documents\visual studio 2013\Projects\end\end\obj\Debug\Interop.WMPLib.dll
+C:\Users\Eleph-C\documents\visual studio 2013\Projects\end\end\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Eleph-C\documents\visual studio 2013\Projects\end\end\obj\Debug\end.csproj.ResolveComReference.cache
+C:\Users\Eleph-C\documents\visual studio 2013\Projects\end\end\bin\Debug\Interop.WMPLib.dll
+C:\Users\Eleph-C\documents\visual studio 2013\Projects\end\end\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Eleph-C\documents\visual studio 2013\Projects\end\end\obj\Debug\end.loading.resources
+D:\Visual Studio 2013\Projects\end\end\bin\Debug\end.exe.config
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\Interop.WMPLib.dll
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\AxInterop.WMPLib.dll
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\end.csproj.ResolveComReference.cache
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\end.exe
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\end.pdb
+D:\Visual Studio 2013\Projects\end\end\bin\Debug\end.exe
+D:\Visual Studio 2013\Projects\end\end\bin\Debug\end.pdb
+D:\Visual Studio 2013\Projects\end\end\bin\Debug\Interop.WMPLib.dll
+D:\Visual Studio 2013\Projects\end\end\bin\Debug\AxInterop.WMPLib.dll
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\end.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\end.Form1.resources
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\end.list.resources
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\end.loading.resources
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\end.login.resources
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\end.Properties.Resources.resources
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\end.user.resources
+D:\Visual Studio 2013\Projects\end\end\obj\Debug\end.csproj.GenerateResource.Cache
+D:\Visual Studio 2013-1\Projects\end\end\bin\Debug\end.exe.config
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\Interop.WMPLib.dll
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\AxInterop.WMPLib.dll
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\end.csproj.ResolveComReference.cache
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\end.exe
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\end.pdb
+D:\Visual Studio 2013-1\Projects\end\end\bin\Debug\end.exe
+D:\Visual Studio 2013-1\Projects\end\end\bin\Debug\end.pdb
+D:\Visual Studio 2013-1\Projects\end\end\bin\Debug\Interop.WMPLib.dll
+D:\Visual Studio 2013-1\Projects\end\end\bin\Debug\AxInterop.WMPLib.dll
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\end.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\end.Form1.resources
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\end.list.resources
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\end.loading.resources
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\end.login.resources
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\end.Properties.Resources.resources
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\end.user.resources
+D:\Visual Studio 2013-1\Projects\end\end\obj\Debug\end.csproj.GenerateResource.Cache
+D:\CAN-DOSYALAR\git\end\end\bin\Debug\end.exe.config
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\Interop.WMPLib.dll
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\AxInterop.WMPLib.dll
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.csproj.ResolveComReference.cache
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.exe
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.pdb
+D:\CAN-DOSYALAR\git\end\end\bin\Debug\end.exe
+D:\CAN-DOSYALAR\git\end\end\bin\Debug\end.pdb
+D:\CAN-DOSYALAR\git\end\end\bin\Debug\Interop.WMPLib.dll
+D:\CAN-DOSYALAR\git\end\end\bin\Debug\AxInterop.WMPLib.dll
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.Form1.resources
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.list.resources
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.loading.resources
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.login.resources
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.Properties.Resources.resources
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.user.resources
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.csproj.GenerateResource.Cache
