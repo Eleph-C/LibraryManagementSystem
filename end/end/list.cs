@@ -27,10 +27,14 @@ namespace end
             InitializeComponent();
             paneltools.BackColor = Color.Transparent;
         }
-        veritabani Veritabani = new veritabani();
+        Kitap kitap = new Kitap();
         public void showdata()
         {
-            Veritabani.KitapGetir(booksdata);
+            kitap = new Kitap();
+            kitap.Booksdata = booksdata;
+            kitap.Booksdata2 = booksdata;
+            kitap.KutuphaneyeKitapGetir();
+            //Veritabani.KitapGetir(booksdata);
         }
         private void btnrefresh_Click(object sender, EventArgs e)
         {
@@ -42,22 +46,17 @@ namespace end
             showdata();
             comboitems.Text = "KitapAdi";
         }
-
-       
         private void txtitems_TextChanged(object sender, EventArgs e)
         {
             if(comboitems.Text!="")
             {
-                Veritabani.KitapAra(booksdata, comboitems.Text, txtitems.Text);
-            //kitaplar.Open();
-            //SqlCommand komut = new SqlCommand("Select * from datas where " + comboitems.Text + " like '%" + txtitems.Text + "%'", kitaplar);
-            //SqlDataAdapter da = new SqlDataAdapter(komut);
-            //try { komut.ExecuteNonQuery(); }
-            //catch { MessageBox.Show("Something gone wrong"); }
-            //DataSet ds = new DataSet();
-            //da.Fill(ds);
-            //booksdata.DataSource = ds.Tables[0];
-            //kitaplar.Close();
+                kitap = new Kitap();
+                kitap.Booksdata = booksdata;
+                kitap.Booksdata2 = booksdata;
+                kitap.KitapKategori = comboitems.Text;
+                kitap.Kelimeara = txtitems.Text;
+                kitap.KutuphanedeKitapAra();
+                //Veritabani.KitapAra(booksdata, comboitems.Text, txtitems.Text);
             }
            
         }

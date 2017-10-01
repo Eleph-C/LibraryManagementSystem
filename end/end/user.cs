@@ -22,9 +22,11 @@ namespace end
                 return handleParam;
             }
         }
-        private string txt;
+        private DataTable datasource;
         veritabani Veritabani = new veritabani();
-        public user(string txt)
+        Kitap kitap;
+        Uye uye;
+        public user(DataTable _datasource)
         {
             InitializeComponent();
             panelchangepass.Hide();
@@ -35,7 +37,7 @@ namespace end
             panelchangepass.Parent = pictureBox1;
             panelbooks.Parent = pictureBox1;
             groupBox1.Parent = pictureBox1;
-            this.txt = txt;
+            this.datasource = _datasource;
         }
 
         public user()
@@ -46,7 +48,11 @@ namespace end
        
         public void showdata()
         {
-            Veritabani.KitapGetir(booksdata);
+            kitap = new Kitap();
+            kitap.Booksdata = booksdata;
+            kitap.Booksdata2 = booksdata;
+            kitap.KutuphaneyeKitapGetir();
+            //Veritabani.KitapGetir(booksdata);
         }
 
 
@@ -92,13 +98,14 @@ namespace end
             }
             else if(txtnewpass.Text.Length>=6 || txtconfirmpass.Text==txtnewpass.Text)
             {
-                Veritabani.UyeSifreAdYenile(txt, txtnewpass.Text);
-                //uyeler.Open();
-                //SqlCommand komut = new SqlCommand("Update memberedit set password='" + txtnewpass.Text + "' where name='" + txt + "'", uyeler);
-                //komut.Parameters.AddWithValue("@password", txtnewpass.Text);
-                //komut.ExecuteNonQuery();
-                //uyeler.Close();
-                MessageBox.Show("The password changed successfully");
+                uye = new Uye();
+                uye.Uyeemail = label2.Text;
+                uye.Uyesifre = txtnewpass.Text;
+                if (uye.KutuphanedekiUyeAdSifresiYenile())
+                {
+                    MessageBox.Show("Sifreniz Degistirildi");
+                }
+                //Veritabani.UyeSifreAdYenile(txt, txtnewpass.Text);
             }
             else
             {
@@ -109,16 +116,14 @@ namespace end
 
         private void user_Load(object sender, EventArgs e)
         {
-            Veritabani.KitapAra(booksdata, "KitapSahibi", txt);
-           //kitaplar.Open();
-           //SqlCommand komut = new SqlCommand("Select * from datas where member like '%" + txt + "%'", kitaplar);
-           //SqlDataAdapter da = new SqlDataAdapter(komut);
-           //DataSet ds = new DataSet();
-           //da.Fill(ds);
-           //booksdata.DataSource = ds.Tables[0];
-           //kitaplar.Close();
-           
-            
+            label1.Text = datasource.Rows[0][1].ToString();
+            label2.Text = datasource.Rows[0][2].ToString();
+            kitap = new Kitap();
+            kitap.Kelimeara = label1.Text;
+            kitap.Booksdata = booksdata;
+            kitap.KutuphanedeKisiyeKitapAra();
+            //booksdata.DataSource = datasource;
+            //Veritabani.KitapAra(booksdata, "KitapSahibi", txt);
         }
 
        

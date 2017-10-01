@@ -43,20 +43,30 @@ namespace end
             panelbooks.BackColor = Color.Transparent;
             panelwarning.BackColor = Color.Transparent;
         }
-
+        
         veritabani Veritabani = new veritabani();
         public void showdatakitap()
         {
-            Veritabani.KitapGetir(kitaplistesidata);
-            Veritabani.KitapGetir(kitaplistesidata2);//simdilik ayarlama yapilmadi
+            kitap = new Kitap();
+            kitap.Booksdata = kitaplistesidata;
+            kitap.Booksdata2 = kitaplistesidata2;
+            kitap.KutuphaneyeKitapGetir();
+            //Veritabani.KitapGetir(kitaplistesidata);
+            //Veritabani.KitapGetir(kitaplistesidata2);//simdilik ayarlama yapilmadi
         }
         public void showdatamember()
         {
-            Veritabani.UyeGetir(memberlistesidata);
+            uye = new Uye();
+            uye.Membersdata = memberlistesidata;
+            uye.KutuphaneyeUyeGetir();
+            //Veritabani.UyeGetir(memberlistesidata);
         }
         public void showdataadmin()
         {
-            Veritabani.AdminGetir(adminlistesidata);
+            yonetici = new Yonetici();
+            yonetici.Adminsdata = adminlistesidata;
+            yonetici.KutuphaneyeAdmingetir();
+            //Veritabani.AdminGetir(adminlistesidata);
         }     
         private void clearbtn1_Click(object sender, EventArgs e)
         {
@@ -73,32 +83,39 @@ namespace end
             txtbooknumber.Text = "";
             KitapNumarasiDolumuBosmu();
         }
-
+        Kitap kitap;
+        Uye uye;
+        Yonetici yonetici;
         private void adnbtn1_Click(object sender, EventArgs e)
         {
             if (txtbookname.Text != "" && txtbooknumber.Text != "")
             {
-                //kitaplar.Open();
-                //SqlCommand komut = new SqlCommand("Insert into datas(Bookname,Bookwriter,Page,Publisher,Category,Translatedby,Releaseday,Barkodnumber)Values(@Name,@Writer,@Page,@Publisher,@Category,@Translatedby,@Releaseday,@Barkodnumber)", kitaplar);
-                //komut.Parameters.AddWithValue("@name", txtbookname.Text);
-                //komut.Parameters.AddWithValue("@writer", txtbookauthor.Text);
-                //komut.Parameters.AddWithValue("@page", txtbookpage.Text);
-                //komut.Parameters.AddWithValue("@publisher", txtbookpublisher.Text);
-                //komut.Parameters.AddWithValue("@category", combobookcategory.Text);
-                //komut.Parameters.AddWithValue("@translatedby", txtbooktranslated.Text);
-                //komut.Parameters.AddWithValue("@releaseday", txtbookdate.Text);
-                //komut.Parameters.AddWithValue("@barkodnumber", txtbookbarkod.Text);
-                //try { komut.ExecuteNonQuery(); }
-                //catch { MessageBox.Show("Add command is failed successfully, Maybe the String is very long"); }
-                int kitapyayintarihi = Convert.ToInt32(txtbookdate.Text);
-                int kitapnumarasi = Convert.ToInt32(txtbooknumber.Text);
-                int bookpage = Convert.ToInt32(txtbookpage.Text);
-                string kitabioduncalankisi = "";
-                DateTime kisiyeverilistarihi = DateTime.Today;
-                DateTime kisidenalinistarihi = DateTime.Today;
-                Veritabani.KitapEkle(kitapnumarasi, txtbookname.Text, txtbookauthor.Text, bookpage, combobookcategory.Text, txtbookpublisher.Text, txtbooktranslated.Text, kitapyayintarihi);
-                showdatakitap();
+                
+                //int kitapyayintarihi = Convert.ToInt32(txtbookdate.Text);
+                //int kitapnumarasi = Convert.ToInt32(txtbooknumber.Text);
+                //int bookpage = Convert.ToInt32(txtbookpage.Text);
+                //string kitabioduncalankisi = "";
+                //DateTime kisiyeverilistarihi = DateTime.Today;
+                //DateTime kisidenalinistarihi = DateTime.Today;
                 //Kitap kitap = new Kitap(kitapnumarasi, txtbookname.Text, txtbookauthor.Text, bookpage, combobookcategory.Text, txtbookpublisher.Text, txtbooktranslated.Text, kitapyayintarihi, kitabioduncalankisi, kisiyeverilistarihi, kisidenalinistarihi);
+                kitap = new Kitap();
+                kitap.KitapNumarasi = Convert.ToInt32(txtbooknumber.Text);
+                kitap.KitapAdi = txtbookname.Text;
+                kitap.KitapYazari = txtbookauthor.Text;
+                kitap.KitapSayfaSayisi = Convert.ToInt32(txtbookpage.Text);
+                kitap.KitapKategori = combobookcategory.Text;
+                kitap.KitapYayincisi = txtbookpublisher.Text;
+                kitap.KitapTercumani = txtbooktranslated.Text;
+                kitap.KitapYayinlanmaTarihi = Convert.ToInt32(txtbookdate.Text);
+                kitap.KitabiOduncAlanKisi = "";
+                kitap.KisiyeVerilisZamani = "";
+                kitap.KisidenAlinisZamani = "";
+                if (kitap.KutuphaneyeKitapEkle())
+                {
+                    MessageBox.Show("Kitap Kayit Edildi");
+                }
+                //Veritabani.KitapEkle(kitapnumarasi, txtbookname.Text, txtbookauthor.Text, bookpage, combobookcategory.Text, txtbookpublisher.Text, txtbooktranslated.Text, kitapyayintarihi);
+                showdatakitap();
                 txtbooknumber.Text = "";
                 txtbookname.Text = "";
                 txtbookauthor.Text = "";
@@ -120,15 +137,15 @@ namespace end
                 DialogResult result = MessageBox.Show("Do You Want To Delete ?", "Information", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    //kitaplar.Open();
-                    //SqlCommand komut = new SqlCommand("Delete from datas where Bookname=@name", kitaplar);
-                    //komut.Parameters.AddWithValue("@name", txtbookname.Text);
-                    //try { komut.ExecuteNonQuery(); }
-                    //catch { MessageBox.Show("Delete is failed successfully"); }
                     int kitapnumarasi = Convert.ToInt32(txtbooknumber.Text);
-                    Veritabani.KitapSil(kitapnumarasi);
+                    kitap = new Kitap();
+                    kitap.KitapNumarasi = kitapnumarasi;
+                    if (kitap.KutuphanedenKitapSil())
+                    {
+                        MessageBox.Show("Kutuphaneden Kitap Silindi");
+                    }
+                    //Veritabani.KitapSil(kitapnumarasi);
                     showdatakitap();
-                    //kitaplar.Close();
                     txtbookname.Clear();
                     txtbookauthor.Clear();
                     txtbookpage.Clear();
@@ -142,35 +159,6 @@ namespace end
             else { }
            
         }
-
-        /*private void srchbtn_Click(object sender, EventArgs e)
-        {
-            
-            if (comboitems.Text != "")
-            {
-                try
-                {
-                    kitaplar.Open();
-                    SqlCommand komut = new SqlCommand("Select * from datas where " + comboitems.Text + " like '%" + txtsearch.Text + "%'", kitaplar);
-                    SqlDataAdapter da = new SqlDataAdapter(komut);
-                    komut.ExecuteNonQuery();
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
-                    kitaplistesidata.DataSource = ds.Tables[0];
-                    kitaplar.Close();
-                   
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Empty Spaces...", "Warning !");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Something gone wrong !", "Error");
-            }     
-        }*/
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int selected = kitaplistesidata.SelectedCells[0].RowIndex;
@@ -247,13 +235,23 @@ namespace end
 
         private void editbtn1_Click(object sender, EventArgs e)
         {
-            //kitaplar.Open();
-            //SqlCommand komut = new SqlCommand("Update datas set Bookname='" + txtbookname.Text + "',Bookwriter='" + txtbookauthor.Text + "',Page='" + txtbookpage.Text + "',Publisher='" + txtbookpublisher.Text + "',Category='" + combobookcategory.Text + "',Translatedby='" + txtbooktranslated.Text + "',Releaseday='" + txtbookdate.Text + "',Barkodnumber='" + txtbookbarkod.Text + "' where Bookname='" + txtbookname.Text + "'", kitaplar);
-            //try { komut.ExecuteNonQuery(); }
-            //catch { MessageBox.Show("Update is failed successfully"); }
-            //showdatakitap();
-            //kitaplar.Close();
-            Veritabani.KitapDuzenle(Convert.ToInt32(txtbooknumber.Text), txtbookname.Text, txtbookauthor.Text, Convert.ToInt32(txtbookpage.Text), combobookcategory.Text, txtbookpublisher.Text, txtbooktranslated.Text, Convert.ToInt32(txtbookdate.Text));
+            kitap = new Kitap();
+            kitap.KitapNumarasi = Convert.ToInt32(txtbooknumber.Text);
+            kitap.KitapAdi = txtbookname.Text;
+            kitap.KitapYazari = txtbookauthor.Text;
+            kitap.KitapSayfaSayisi = Convert.ToInt32(txtbookpage.Text);
+            kitap.KitapKategori = combobookcategory.Text;
+            kitap.KitapYayincisi = txtbookpublisher.Text;
+            kitap.KitapTercumani = txtbooktranslated.Text;
+            kitap.KitapYayinlanmaTarihi = Convert.ToInt32(txtbookdate.Text);
+            //kitap.KitabiOduncAlanKisi = "";
+            //kitap.KisiyeVerilisZamani = kisiyeverilistarihi;
+            //kitap.KisidenAlinisZamani = kisidenalinistarihi;
+            if (kitap.KutuphanedekiKitabiDuzenle())
+            {
+                MessageBox.Show("Kitap Duzeltildi");
+            }
+            //Veritabani.KitapDuzenle(Convert.ToInt32(txtbooknumber.Text), txtbookname.Text, txtbookauthor.Text, Convert.ToInt32(txtbookpage.Text), combobookcategory.Text, txtbookpublisher.Text, txtbooktranslated.Text, Convert.ToInt32(txtbookdate.Text));
             showdatakitap();
             KitapNumarasiDolumuBosmu();
         }
@@ -267,7 +265,7 @@ namespace end
         
         private void checkinout_Click(object sender, EventArgs e)
         {
-            comboitems.Text = "BookName";//COMBOBOX HATA VERIR KOYULMAZSA
+            comboBox1.Text = comboBox1.Items[1].ToString();//COMBOBOX HATA VERIR KOYULMAZSA
             panelcheck.Show();
             panelmember.Hide();
             paneladmin.Hide();
@@ -278,7 +276,7 @@ namespace end
 
         private void addoreditbtn_Click(object sender, EventArgs e)
         {
-            comboitems.Text = "BookName";//COMBOBOX HATA VERIR KOYULMAZSA
+            comboitems.Text = comboitems.Items[1].ToString();//COMBOBOX HATA VERIR KOYULMAZSA
             panelcheck.Hide();
             panelmember.Hide();
             paneladmin.Hide();
@@ -315,7 +313,16 @@ namespace end
                 //kitaplar.Close();
                 string verilenzaman = givendatetime.Text;
                 string alinanzaman = takendatetime.Text;
-                Veritabani.KitapCheckInOut(txtcheckmembername.Text, verilenzaman, alinanzaman, txtcheckbookname.Text);
+                kitap = new Kitap();
+                kitap.KitabiOduncAlanKisi = txtcheckmembername.Text;
+                kitap.KisiyeVerilisZamani = verilenzaman;
+                kitap.KisidenAlinisZamani = alinanzaman;
+                kitap.KitapAdi = txtcheckbookname.Text;
+                if (kitap.KutuphanedenKitapCheckInOut())
+                {
+                    MessageBox.Show("Kitap Uyeye Verildi");
+                }
+                //Veritabani.KitapCheckInOut(txtcheckmembername.Text, verilenzaman, alinanzaman, txtcheckbookname.Text);
                 showdatakitap();
                 txtcheckmembername.Clear();
             }
@@ -331,7 +338,21 @@ namespace end
             //try { komut.ExecuteNonQuery(); }
             //catch { MessageBox.Show("Update is failed successfully"); }
             //uyeler.Close();
-            try { Veritabani.UyeDuzenle(Convert.ToInt32(txtmembertc.Text), txtmembername.Text, txtmemberemail.Text, Convert.ToInt32(txtmemberphone.Text), txtmemberpass.Text); }
+            try 
+            {
+                uye = new Uye();
+                uye.Uyekimlik = Convert.ToInt32(txtmembertc.Text);
+                uye.Uyeadi = txtmembername.Text;
+                uye.Uyeemail = txtmemberemail.Text;
+                uye.Uyetelefon = Convert.ToInt32(txtmemberphone.Text);
+                uye.Uyesifre = txtmemberpass.Text;
+                if (uye.KutuphanedekiUyeyiDuzenle())
+                {
+                    MessageBox.Show("Uye Duzenlendi");
+                }
+                //Veritabani.UyeDuzenle(Convert.ToInt32(txtmembertc.Text), txtmembername.Text, txtmemberemail.Text, Convert.ToInt32(txtmemberphone.Text), txtmemberpass.Text); 
+            }
+            
             catch (Exception ex) { MessageBox.Show(ex.Message.ToString()); }
             showdatamember();
         }
@@ -355,7 +376,17 @@ namespace end
                 //komut.Parameters.AddWithValue("@password", txtmemeberpass.Text);
                 //try { komut.ExecuteNonQuery(); }
                 //catch { MessageBox.Show("Add command is failed successfully"); }
-                Veritabani.UyeEkle(Convert.ToInt32(txtmembertc.Text), txtmembername.Text, txtmemberemail.Text,Convert.ToInt32(txtmemberphone.Text), txtmemberpass.Text);
+                uye = new Uye();
+                uye.Uyekimlik = Convert.ToInt32(txtmembertc.Text);
+                uye.Uyeadi = txtmembername.Text;
+                uye.Uyeemail = txtmemberemail.Text;
+                uye.Uyetelefon = Convert.ToInt32(txtmemberphone.Text);
+                uye.Uyesifre = txtmemberpass.Text;
+                if (uye.KutuphaneyeUyeEkle())
+                {
+                    MessageBox.Show("Uye Eklendi");
+                }
+                //Veritabani.UyeEkle(Convert.ToInt32(txtmembertc.Text), txtmembername.Text, txtmemberemail.Text,Convert.ToInt32(txtmemberphone.Text), txtmemberpass.Text);
                 showdatamember();
                 //uyeler.Close();
                 txtmembername.Clear();
@@ -542,7 +573,13 @@ namespace end
                 //catch { MessageBox.Show("Delete is failed successfully"); }
                 //uyeler.Close();
                 int uyekimlik = Convert.ToInt32(txtmembertc.Text);
-                Veritabani.UyeSil(uyekimlik);
+                uye = new Uye();
+                uye.Uyekimlik = uyekimlik;
+                if (uye.KutuphanedenUyeSil())
+                {
+                    MessageBox.Show("Uye Silindi");
+                }
+                //Veritabani.UyeSil(uyekimlik);
                 txtmembername.Clear();
                 txtmemberemail.Clear();
                 txtmemberphone.Clear();
@@ -555,31 +592,32 @@ namespace end
 
         private void btnoutcheck_Click_1(object sender, EventArgs e)
         {
-            //kitaplar.Open();
-            //SqlCommand komut = new SqlCommand("Update datas set givendate='" + " " + "',takendate='" + " " +"', member = '"+" " + "'where bookname='" + txtcheckbookname.Text + "'", kitaplar);
-            //try { komut.ExecuteNonQuery(); }
-            //catch { MessageBox.Show("Check Out is failed successfully"); }
-            //showdatakitap();
-            //kitaplar.Close();
-            txtcheckmembername.Clear();
-            
-
             DateTime alinmatarihi = Convert.ToDateTime(takendatetime.Value.ToString());
             DateTime gununtarihi = Convert.ToDateTime(checkouttime.Value.ToString());
             TimeSpan fark;
             fark = alinmatarihi - gununtarihi;
             int gecikme = Int32.Parse(fark.Days.ToString());
-
-            if (gecikme > 0)
+            kitap = new Kitap();
+            kitap.KitabiOduncAlanKisi = string.Empty;
+            kitap.KisiyeVerilisZamani = "";
+            kitap.KisidenAlinisZamani = "";
+            kitap.KitapAdi = txtcheckbookname.Text;
+            if (kitap.KutuphanedenKitapCheckInOut())
             {
-                MessageBox.Show(gecikme + " kadar gun daha var");
+                if (gecikme > 0)
+                {
+                    MessageBox.Show(gecikme + " kadar gun daha var");
+                }
+                else if (gecikme < 0)
+                {
+                    double a = (-1 * gecikme) * (0.75);
+                    MessageBox.Show("kitabinizin iade tarihi " + (-1 * gecikme) + " gun once bitti" + "\n" + a + " tl odemeniz gerekmekte.");
+                }
+                MessageBox.Show("Kitap Uyeden Alindi");
+                txtcheckmembername.Clear();
+                
             }
-            else if (gecikme < 0)
-            {
-                double a = (-1 * gecikme) * (0.75);
-                MessageBox.Show("kitabinizin iade tarihi " + (-1*gecikme) + " gun once bitti"+"\n"+a+" tl odemeniz gerekmekte.");
-            }
-            Veritabani.KitapCheckInOut(txtcheckmembername.Text, givendatetime.Text="", takendatetime.Text="", txtcheckbookname.Text);
+            //Veritabani.KitapCheckInOut(txtcheckmembername.Text, givendatetime.Text="", takendatetime.Text="", txtcheckbookname.Text);
             showdatakitap();
         }
 
@@ -597,18 +635,19 @@ namespace end
         {
             if (txtadminname.Text != "")
             {
-                //SqlCommand komut = new SqlCommand("Insert into adminedit(Name,Email,Phone,TCNumber,Password,Job)Values(@Name,@Email,@Phone,@TCNumber,@Password,@Job)", adminler);
-                //komut.Parameters.AddWithValue("@name", txtadminname.Text);
-                //komut.Parameters.AddWithValue("@email", txtadminemail.Text);
-                //komut.Parameters.AddWithValue("@phone", txtadminphone.Text);
-                //komut.Parameters.AddWithValue("@tcnumber", txtadmintc.Text);
-                //komut.Parameters.AddWithValue("@password", txtadminpassword.Text);
-                //komut.Parameters.AddWithValue("@job", jobs.Text);
-                //try { komut.ExecuteNonQuery(); }
-                //catch { MessageBox.Show("Add command is failed successfully"); }
-                Veritabani.AdminEkle(Convert.ToInt32(txtadmintc.Text), txtadminname.Text, txtadminemail.Text, Convert.ToInt32(txtadminphone.Text), txtadminpassword.Text, jobs.Text);
+                yonetici = new Yonetici();
+                yonetici.Adminkimlik = Convert.ToInt32(txtadmintc.Text);
+                yonetici.Adminadi = txtadminname.Text;
+                yonetici.Adminemail = txtadminemail.Text;
+                yonetici.Admintelefon = Convert.ToInt32(txtadminphone.Text);
+                yonetici.Adminsifre = txtadminpassword.Text;
+                yonetici.Adminlikdurumu = jobs.Text;
+                if (yonetici.KutuphaneyeAdminEkle())
+                {
+                    MessageBox.Show("Yonetici Eklendi");
+                }
+                //Veritabani.AdminEkle(Convert.ToInt32(txtadmintc.Text), txtadminname.Text, txtadminemail.Text, Convert.ToInt32(txtadminphone.Text), txtadminpassword.Text, jobs.Text);
                 showdataadmin();
-                
                 txtadminname.Clear();
                 txtadminemail.Clear();
                 txtadminphone.Clear();
@@ -623,12 +662,18 @@ namespace end
 
         private void btnupdate2_Click(object sender, EventArgs e)
         {
-            //adminler.Open();
-            //SqlCommand komut = new SqlCommand("Update adminedit set name='" + txtadminname.Text + "',email='" + txtadminemail.Text + "',phone='" + txtadminphone.Text + "',tcnumber='" + txtadmintc.Text + "',password='" + txtadminpassword.Text + "',job='"+jobs.Text+"' where name='" + txtadminname.Text + "'", adminler);
-            //try { komut.ExecuteNonQuery(); }
-            //catch { MessageBox.Show("Update is failed successfully"); }
-            //adminler.Close();
-            Veritabani.AdminDuzenle(Convert.ToInt32(txtadmintc.Text),txtadminname.Text,txtadminemail.Text,Convert.ToInt32(txtadminphone.Text),txtadminpassword.Text,jobs.Text);
+            yonetici = new Yonetici();
+            yonetici.Adminkimlik = Convert.ToInt32(txtadmintc.Text);
+            yonetici.Adminadi = txtadminname.Text;
+            yonetici.Adminemail = txtadminemail.Text;
+            yonetici.Admintelefon = Convert.ToInt32(txtadminphone.Text);
+            yonetici.Adminsifre = txtadminpassword.Text;
+            yonetici.Adminlikdurumu = jobs.Text;
+            if (yonetici.KutuphaneAdminiDuzenle())
+            {
+                MessageBox.Show("Yonetici Duzenlendi");
+            }
+            //Veritabani.AdminDuzenle(Convert.ToInt32(txtadmintc.Text),txtadminname.Text,txtadminemail.Text,Convert.ToInt32(txtadminphone.Text),txtadminpassword.Text,jobs.Text);
             showdataadmin();
         }
 
@@ -638,13 +683,13 @@ namespace end
 
             if (result == DialogResult.Yes)
             {
-                //adminler.Open();
-                //SqlCommand komut = new SqlCommand("Delete from adminedit where name=@name", adminler);
-                //komut.Parameters.AddWithValue("@name", txtadminname.Text);
-                //try { komut.ExecuteNonQuery(); }
-                //catch { MessageBox.Show("Delete is failed successfully"); }
-                //adminler.Close();
-                Veritabani.AdminSil(Convert.ToInt32(txtadmintc.Text));
+                yonetici = new Yonetici();
+                yonetici.Adminkimlik = Convert.ToInt32(txtadmintc.Text);
+                if (yonetici.KutuphaneAdminiSil())
+                {
+                    MessageBox.Show("Yonetici Kutuphaneden Silindi");
+                }
+                //Veritabani.AdminSil(Convert.ToInt32(txtadmintc.Text));
                 txtadminname.Clear();
                 txtadminemail.Clear();
                 txtadminphone.Clear();
@@ -671,7 +716,10 @@ namespace end
             //string a = gizliadminlistesidata.CurrentRow.Cells[5].Value.ToString();
            try
             {
-                if (Veritabani.AdminGiris(txtadminuser.Text, txtadminpass.Text) == true)
+                yonetici = new Yonetici();
+                yonetici.Adminemail = txtadminuser.Text;
+                yonetici.Adminsifre = txtadminpass.Text;
+                if (yonetici.KutuphaneAdminiGiris())
                 {
                     txtadminemail.Clear();
                     txtadminpass.Clear();
@@ -773,22 +821,20 @@ namespace end
         {
             if (comboitems.Text != "")
             {
-                try
-                {
-                    //kitaplar.Open();
-                    //SqlCommand komut = new SqlCommand("Select * from datas where " + comboitems.Text + " like '%" + txtsearch.Text + "%'", kitaplar);
-                    //SqlDataAdapter da = new SqlDataAdapter(komut);
-                    //komut.ExecuteNonQuery();
-                    //DataSet ds = new DataSet();
-                    //da.Fill(ds);
-                    //kitaplistesidata.DataSource = ds.Tables[0];
-                    //kitaplar.Close();
-                    Veritabani.KitapAra(kitaplistesidata, combobookcategory.Text, txtsearch.Text);
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Empty Spaces...", "Warning !");
-                }
+                //kitaplar.Open();
+                //SqlCommand komut = new SqlCommand("Select * from datas where " + comboitems.Text + " like '%" + txtsearch.Text + "%'", kitaplar);
+                //SqlDataAdapter da = new SqlDataAdapter(komut);
+                //komut.ExecuteNonQuery();
+                //DataSet ds = new DataSet();
+                //da.Fill(ds);
+                //kitaplistesidata.DataSource = ds.Tables[0];
+                //kitaplar.Close();
+                kitap = new Kitap();
+                kitap.Booksdata = kitaplistesidata;
+                kitap.KitapKategori = comboitems.Text;
+                kitap.Kelimeara = txtsearch.Text;
+                kitap.KutuphanedeKitapAra();
+                //Veritabani.KitapAra(kitaplistesidata, combobookcategory.Text, txtsearch.Text);
             }
            
         }
@@ -814,31 +860,15 @@ namespace end
 
             if (comboBox1.Text != "")
             {
-                try
-                {
-                    //kitaplar.Open();
-                    //SqlCommand komut = new SqlCommand("Select * from datas where " + comboBox1.Text + " like '%" + a + "%'", kitaplar);
-                    //SqlDataAdapter da = new SqlDataAdapter(komut);
-                    //komut.ExecuteNonQuery();
-                    //DataSet ds = new DataSet();
-                    //da.Fill(ds);
-                    //kitaplistesidata2.DataSource = ds.Tables[0];
-                    //kitaplar.Close();
-                    Veritabani.KitapAra(kitaplistesidata2, comboBox1.Text, a);
-
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Empty Spaces...", "Warning !");
-                }
+                kitap = new Kitap();
+                kitap.Booksdata = kitaplistesidata2;
+                kitap.KitapKategori = comboBox1.Text;
+                kitap.Kelimeara = a;
+                kitap.KutuphanedeKitapAra();
+                //Veritabani.KitapAra(kitaplistesidata2, comboBox1.Text, a);
             }
             else
                 MessageBox.Show("Something gone wrong", "Information!");
-        }
-       
-
-
-       
-        
+        }  
     }
 }

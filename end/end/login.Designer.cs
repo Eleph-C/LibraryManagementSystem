@@ -33,8 +33,6 @@
             this.btnadminlogin = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnrules = new System.Windows.Forms.Button();
             this.btnrules2 = new System.Windows.Forms.Button();
             this.piclibraryrules = new System.Windows.Forms.PictureBox();
@@ -47,8 +45,8 @@
             this.btnuserlog = new System.Windows.Forms.Button();
             this.btnusercancel = new System.Windows.Forms.Button();
             this.linkLabellost = new System.Windows.Forms.LinkLabel();
-            this.txtuserpass = new System.Windows.Forms.TextBox();
-            this.txtusername = new System.Windows.Forms.TextBox();
+            this.txtkullanicisifre = new System.Windows.Forms.TextBox();
+            this.txtkullaniciemail = new System.Windows.Forms.TextBox();
             this.lbluserpass = new System.Windows.Forms.Label();
             this.lblusername = new System.Windows.Forms.Label();
             this.lbluser = new System.Windows.Forms.Label();
@@ -57,8 +55,8 @@
             this.btnadminlog = new System.Windows.Forms.Button();
             this.btncanceladmin = new System.Windows.Forms.Button();
             this.linkLabellost2 = new System.Windows.Forms.LinkLabel();
-            this.txtadminpass = new System.Windows.Forms.TextBox();
-            this.txtadminname = new System.Windows.Forms.TextBox();
+            this.txtyoneticisifre = new System.Windows.Forms.TextBox();
+            this.txtyoneticiemail = new System.Windows.Forms.TextBox();
             this.lbladminpass = new System.Windows.Forms.Label();
             this.lbladminname = new System.Windows.Forms.Label();
             this.lbladmin = new System.Windows.Forms.Label();
@@ -99,10 +97,10 @@
             this.txtadminconfirmpass = new System.Windows.Forms.TextBox();
             this.lbladminconfirmpass = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piclibraryrules)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksdata)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -122,6 +120,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnuserlogin
@@ -185,24 +185,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(875, 31);
-            this.panel1.TabIndex = 14;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(874, 716);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
             // 
             // btnrules
             // 
@@ -291,8 +273,8 @@
             this.tabPage2.Controls.Add(this.btnuserlog);
             this.tabPage2.Controls.Add(this.btnusercancel);
             this.tabPage2.Controls.Add(this.linkLabellost);
-            this.tabPage2.Controls.Add(this.txtuserpass);
-            this.tabPage2.Controls.Add(this.txtusername);
+            this.tabPage2.Controls.Add(this.txtkullanicisifre);
+            this.tabPage2.Controls.Add(this.txtkullaniciemail);
             this.tabPage2.Controls.Add(this.lbluserpass);
             this.tabPage2.Controls.Add(this.lblusername);
             this.tabPage2.Controls.Add(this.lbluser);
@@ -340,20 +322,20 @@
             this.linkLabellost.Text = "Lost Your Password ?";
             this.linkLabellost.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabellost_LinkClicked_1);
             // 
-            // txtuserpass
+            // txtkullanicisifre
             // 
-            this.txtuserpass.Location = new System.Drawing.Point(431, 173);
-            this.txtuserpass.Name = "txtuserpass";
-            this.txtuserpass.Size = new System.Drawing.Size(133, 20);
-            this.txtuserpass.TabIndex = 17;
-            this.txtuserpass.UseSystemPasswordChar = true;
+            this.txtkullanicisifre.Location = new System.Drawing.Point(431, 173);
+            this.txtkullanicisifre.Name = "txtkullanicisifre";
+            this.txtkullanicisifre.Size = new System.Drawing.Size(133, 20);
+            this.txtkullanicisifre.TabIndex = 17;
+            this.txtkullanicisifre.UseSystemPasswordChar = true;
             // 
-            // txtusername
+            // txtkullaniciemail
             // 
-            this.txtusername.Location = new System.Drawing.Point(431, 136);
-            this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(133, 20);
-            this.txtusername.TabIndex = 16;
+            this.txtkullaniciemail.Location = new System.Drawing.Point(431, 136);
+            this.txtkullaniciemail.Name = "txtkullaniciemail";
+            this.txtkullaniciemail.Size = new System.Drawing.Size(133, 20);
+            this.txtkullaniciemail.TabIndex = 16;
             // 
             // lbluserpass
             // 
@@ -369,11 +351,11 @@
             // 
             this.lblusername.AutoSize = true;
             this.lblusername.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblusername.Location = new System.Drawing.Point(352, 138);
+            this.lblusername.Location = new System.Drawing.Point(340, 138);
             this.lblusername.Name = "lblusername";
-            this.lblusername.Size = new System.Drawing.Size(66, 18);
+            this.lblusername.Size = new System.Drawing.Size(78, 18);
             this.lblusername.TabIndex = 14;
-            this.lblusername.Text = "Uye Adi : ";
+            this.lblusername.Text = "Uye Email : ";
             // 
             // lbluser
             // 
@@ -401,8 +383,8 @@
             this.tabPage3.Controls.Add(this.btnadminlog);
             this.tabPage3.Controls.Add(this.btncanceladmin);
             this.tabPage3.Controls.Add(this.linkLabellost2);
-            this.tabPage3.Controls.Add(this.txtadminpass);
-            this.tabPage3.Controls.Add(this.txtadminname);
+            this.tabPage3.Controls.Add(this.txtyoneticisifre);
+            this.tabPage3.Controls.Add(this.txtyoneticiemail);
             this.tabPage3.Controls.Add(this.lbladminpass);
             this.tabPage3.Controls.Add(this.lbladminname);
             this.tabPage3.Controls.Add(this.lbladmin);
@@ -450,20 +432,20 @@
             this.linkLabellost2.Text = "Lost Your Password ?";
             this.linkLabellost2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // txtadminpass
+            // txtyoneticisifre
             // 
-            this.txtadminpass.Location = new System.Drawing.Point(420, 163);
-            this.txtadminpass.Name = "txtadminpass";
-            this.txtadminpass.Size = new System.Drawing.Size(139, 20);
-            this.txtadminpass.TabIndex = 25;
-            this.txtadminpass.UseSystemPasswordChar = true;
+            this.txtyoneticisifre.Location = new System.Drawing.Point(420, 163);
+            this.txtyoneticisifre.Name = "txtyoneticisifre";
+            this.txtyoneticisifre.Size = new System.Drawing.Size(139, 20);
+            this.txtyoneticisifre.TabIndex = 25;
+            this.txtyoneticisifre.UseSystemPasswordChar = true;
             // 
-            // txtadminname
+            // txtyoneticiemail
             // 
-            this.txtadminname.Location = new System.Drawing.Point(420, 126);
-            this.txtadminname.Name = "txtadminname";
-            this.txtadminname.Size = new System.Drawing.Size(139, 20);
-            this.txtadminname.TabIndex = 24;
+            this.txtyoneticiemail.Location = new System.Drawing.Point(420, 126);
+            this.txtyoneticiemail.Name = "txtyoneticiemail";
+            this.txtyoneticiemail.Size = new System.Drawing.Size(139, 20);
+            this.txtyoneticiemail.TabIndex = 24;
             // 
             // lbladminpass
             // 
@@ -897,6 +879,24 @@
             this.pictureBox11.TabIndex = 29;
             this.pictureBox11.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(875, 31);
+            this.panel1.TabIndex = 14;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(874, 716);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -914,8 +914,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.piclibraryrules)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksdata)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -943,6 +941,8 @@
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -962,7 +962,7 @@
         private System.Windows.Forms.Button btnuserlog;
         private System.Windows.Forms.Button btnusercancel;
         private System.Windows.Forms.LinkLabel linkLabellost;
-        private System.Windows.Forms.TextBox txtuserpass;
+        private System.Windows.Forms.TextBox txtkullanicisifre;
         private System.Windows.Forms.Label lbluserpass;
         private System.Windows.Forms.Label lblusername;
         private System.Windows.Forms.Label lbluser;
@@ -970,8 +970,8 @@
         private System.Windows.Forms.Button btnadminlog;
         private System.Windows.Forms.Button btncanceladmin;
         private System.Windows.Forms.LinkLabel linkLabellost2;
-        private System.Windows.Forms.TextBox txtadminpass;
-        private System.Windows.Forms.TextBox txtadminname;
+        private System.Windows.Forms.TextBox txtyoneticisifre;
+        private System.Windows.Forms.TextBox txtyoneticiemail;
         private System.Windows.Forms.Label lbladminpass;
         private System.Windows.Forms.Label lbladminname;
         private System.Windows.Forms.Label lbladmin;
@@ -1015,7 +1015,7 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
-        public System.Windows.Forms.TextBox txtusername;
+        public System.Windows.Forms.TextBox txtkullaniciemail;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox piclibraryrules;
         private System.Windows.Forms.Button btnrules2;

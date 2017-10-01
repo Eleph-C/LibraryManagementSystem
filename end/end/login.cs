@@ -51,9 +51,16 @@ namespace end
             
         }
         veritabani Veritabani = new veritabani();
+        Kitap kitap;
+        Uye uye;
+        Yonetici yonetici;
         public void showkitap()
         {
-            Veritabani.KitapGetir(booksdata);
+            kitap = new Kitap();
+            kitap.Booksdata = booksdata;
+            kitap.Booksdata2 = booksdata;
+            kitap.KutuphaneyeKitapGetir();
+            //Veritabani.KitapGetir(booksdata);
         }
         private void btnuserlogin_Click(object sender, EventArgs e)
         {
@@ -85,7 +92,14 @@ namespace end
             }
             else if (txtnewpassworduser.Text.Length > 6 || txtconfrmpassuser.Text == txtnewpassworduser.Text)
             {
-                Veritabani.UyeSifreYenile(txtnewpassworduser.Text, txtuseremail.Text);
+                uye = new Uye();
+                uye.Uyesifre = txtnewpassworduser.Text;
+                uye.Uyeemail = txtuseremail.Text;
+                if (uye.KutuphanedekiUyeyiDuzenle())
+                {
+                    MessageBox.Show("Bilgileriniz Kaydedildi");
+                }
+                //Veritabani.UyeSifreYenile(txtnewpassworduser.Text, txtuseremail.Text);
                 //uyeler.Open();
                 //SqlCommand komut = new SqlCommand("Update memberedit set password='" + txtnewpassworduser.Text + "' where email='" + txtuseremail.Text + "'", uyeler);
                 ////komut.Parameters.AddWithValue("@password", txtnewpassworduser.Text);
@@ -106,15 +120,15 @@ namespace end
         private void btnusercancel_Click_1(object sender, EventArgs e)
         {
             tabControl1.SelectTab(0);
-            txtusername.Text = "";
-            txtuserpass.Text = "";
+            txtkullaniciemail.Text = "";
+            txtkullanicisifre.Text = "";
         }
 
         private void btncanceladmin_Click_1(object sender, EventArgs e)
         {
             tabControl1.SelectTab(0);
-            txtadminname.Text = "";
-            txtadminpass.Text = "";
+            txtyoneticiemail.Text = "";
+            txtyoneticisifre.Text = "";
         }
 
         private void linkLabellost_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
@@ -168,7 +182,10 @@ namespace end
         }
         private void btnadminlog_Click_1(object sender, EventArgs e)
         {
-            if (Veritabani.AdminGiris(txtadminname.Text, txtadminpass.Text)==true)
+            yonetici = new Yonetici();
+            yonetici.Adminemail = txtyoneticiemail.Text;
+            yonetici.Adminsifre = txtyoneticisifre.Text;
+            if ( yonetici.KutuphaneAdminiGiris())
             {
                 Form1 yeni = new Form1();
                 yeni.Show();
@@ -193,10 +210,12 @@ namespace end
         
         private void btnuserlog_Click_1(object sender, EventArgs e)
         {
-            if (Veritabani.UyeGiris(txtusername.Text, txtuserpass.Text) == true)
+            uye = new Uye();
+            uye.Uyeemail = txtkullaniciemail.Text;
+            uye.Uyesifre = txtkullanicisifre.Text;
+            if (uye.KutuphaneyeUyeGirisi())
             {
-                txt = txtusername.Text;
-                user frm = new user(txt);
+                user frm = new user(uye.KutuphanedeUyeAra());
                 frm.Show();
                 this.Hide();
             }
@@ -275,13 +294,18 @@ namespace end
             }
             else if (txtadminnewpass.Text.Length > 6 || txtadminconfirmpass.Text == txtadminnewpass.Text)
             {
-                Veritabani.AdminSifreYenile(txtadminemail.Text, txtadminnewpass.Text);
+                yonetici.Adminemail = txtadminemail.Text;
+                yonetici.Adminsifre = txtadminnewpass.Text;
+                if (yonetici.KutuphaneAdminiDuzenle())
+                {
+                    MessageBox.Show("Bilgileriniz Kaydedildi");
+                }
+                //Veritabani.AdminSifreYenile(txtadminemail.Text, txtadminnewpass.Text);
                 //adminler.Open();
                 //SqlCommand komut = new SqlCommand("Update adminedit set password='" + txtadminnewpass.Text + "' where email='" + txtadminemail.Text + "'", adminler);
                 //try { komut.ExecuteNonQuery(); }
                 //catch { MessageBox.Show("Changin password is failed successfully"); }
                 //adminler.Close();
-                MessageBox.Show("The password changed successfully");
                 tabControl1.SelectTab(2);
             }
             else
@@ -299,6 +323,9 @@ namespace end
 
         private void login_Load(object sender, EventArgs e)
         {
+            
+            
+            
             showkitap();
         }
 
@@ -328,7 +355,13 @@ namespace end
             if (txtsearch.Text != string.Empty)
             {
                 booksdata.Visible = true;
-                Veritabani.KitapAra(booksdata, "KitapAdi", txtsearch.Text);
+                kitap = new Kitap();
+                kitap.Booksdata = booksdata;
+                kitap.Booksdata2 = booksdata;
+                kitap.KitapKategori = "KitapAdi";
+                kitap.Kelimeara = txtsearch.Text;
+                kitap.KutuphanedeKitapAra();
+                //Veritabani.KitapAra(booksdata, "KitapAdi", txtsearch.Text);
             }
             else
             {

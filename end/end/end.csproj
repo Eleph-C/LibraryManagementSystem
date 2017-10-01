@@ -93,7 +93,9 @@
     <Compile Include="user.Designer.cs">
       <DependentUpon>user.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uye.cs" />
     <Compile Include="veritabani.cs" />
+    <Compile Include="Yonetici.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

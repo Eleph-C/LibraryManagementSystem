@@ -600,15 +600,15 @@
             // 
             this.comboitems.FormattingEnabled = true;
             this.comboitems.Items.AddRange(new object[] {
-            "BarkodNumber",
-            "Bookname",
-            "Bookwriter",
-            "Page",
-            "Publisher",
-            "Category",
-            "Translatedby",
-            "ReleaseDay",
-            "Member"});
+            "KitapNumarasi",
+            "KitapAdi",
+            "KitapYazari",
+            "KitapSayfaSayisi",
+            "KitapYayinci",
+            "KitapKategori",
+            "KitapTercumani",
+            "KitapYayinTarihi",
+            "KitapSahibi"});
             this.comboitems.Location = new System.Drawing.Point(425, 53);
             this.comboitems.Name = "comboitems";
             this.comboitems.Size = new System.Drawing.Size(131, 21);
@@ -1240,7 +1240,7 @@
             this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(95, 97);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(460, 33);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(494, 33);
             this.flowLayoutPanel1.TabIndex = 93;
             // 
             // checkbooknamelbl
@@ -1281,16 +1281,16 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "BarkodNumber",
-            "BookName",
-            "BookWriter",
-            "Category",
-            "Member",
-            "Page",
-            "Publisher",
-            "ReleaseDay",
-            "Translatedby"});
-            this.comboBox1.Location = new System.Drawing.Point(199, 62);
+            "KitapNumarasi",
+            "KitapAdi",
+            "KitapYazari",
+            "KitapSayfaSayisi",
+            "KitapYayinci",
+            "KitapKategori",
+            "KitapTercumani",
+            "KitapYayinTarihi",
+            "KitapSahibi"});
+            this.comboBox1.Location = new System.Drawing.Point(208, 62);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(117, 21);
             this.comboBox1.TabIndex = 86;
@@ -1532,11 +1532,11 @@
             this.ClientSize = new System.Drawing.Size(930, 560);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.panelbooks);
-            this.Controls.Add(this.panelmember);
             this.Controls.Add(this.panelcheck);
             this.Controls.Add(this.panelwarning);
             this.Controls.Add(this.paneladmin);
+            this.Controls.Add(this.panelbooks);
+            this.Controls.Add(this.panelmember);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;

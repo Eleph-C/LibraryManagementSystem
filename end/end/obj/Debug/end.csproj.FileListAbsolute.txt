@@ -69,3 +69,10 @@ D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.login.resources
 D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.Properties.Resources.resources
 D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.user.resources
 D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.csproj.GenerateResource.Cache
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.csprojResolveAssemblyReference.cache
+D:\CAN-DOSYALAR\YeniGit\LibraryManagementSystem\end\end\bin\Debug\end.exe.config
+D:\CAN-DOSYALAR\YeniGit\LibraryManagementSystem\end\end\obj\Debug\Interop.WMPLib.dll
+D:\CAN-DOSYALAR\YeniGit\LibraryManagementSystem\end\end\obj\Debug\AxInterop.WMPLib.dll
+D:\CAN-DOSYALAR\YeniGit\LibraryManagementSystem\end\end\obj\Debug\end.csproj.ResolveComReference.cache
+D:\CAN-DOSYALAR\YeniGit\LibraryManagementSystem\end\end\obj\Debug\end.exe
+D:\CAN-DOSYALAR\YeniGit\LibraryManagementSystem\end\end\obj\Debug\end.pdb

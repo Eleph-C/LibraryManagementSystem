@@ -18,9 +18,9 @@ namespace end
         //SqlConnection kitaplar = new SqlConnection("Data Source=ELEPH-C\\MYSQL;Initial Catalog=kutuphane;Integrated Security=True;");
         //SqlConnection uyeler = new SqlConnection("Data Source=ELEPH-C\\MYSQL;Initial Catalog=member;Integrated Security=True;");
         //SqlConnection adminler = new SqlConnection("Data Source=ELEPH-C\\MYSQL;Initial Catalog=admin;Integrated Security=True;");
-        static private OleDbConnection Kitap = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + "\\KutuphaneVeritabani.accdb");
-        static private OleDbConnection Admin = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + "\\AdminVeritabani.accdb");
-        static private OleDbConnection Uye = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + "\\UyeVeritabani.accdb");
+        OleDbConnection Kitap = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + "\\KutuphaneVeritabani.accdb");
+        OleDbConnection Admin = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + "\\AdminVeritabani.accdb");
+        OleDbConnection Uye = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Application.StartupPath + "\\UyeVeritabani.accdb");
         static Form1 anaform = new Form1();
         public void KitapGetir(DataGridView kitaplistesidata)
         {
