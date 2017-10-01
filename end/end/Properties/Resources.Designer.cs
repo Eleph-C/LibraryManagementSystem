@@ -93,9 +93,29 @@ namespace end.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap libraryrules {
+            get {
+                object obj = ResourceManager.GetObject("libraryrules", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TLbvMyO {
             get {
                 object obj = ResourceManager.GetObject("TLbvMyO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap walpaper {
+            get {
+                object obj = ResourceManager.GetObject("walpaper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -33,52 +33,41 @@ namespace end
             panelbooks.Hide();
             panelchangepass.BackColor = Color.Transparent;
             panelbooks.BackColor = Color.Transparent;
-            groupBox1.BackColor = Color.Transparent;
-            panelchangepass.Parent = pictureBox1;
-            panelbooks.Parent = pictureBox1;
-            groupBox1.Parent = pictureBox1;
             this.datasource = _datasource;
         }
-       
-        private void btnchangepass_Click(object sender, EventArgs e)
+
+        private void btnsifredegis_Click(object sender, EventArgs e)
         {
             panelbooks.Hide();
             panelchangepass.Show();
         }
-
-        private void btnborrowedbooks_Click(object sender, EventArgs e)
+        private void btnkitaplariniz_Click(object sender, EventArgs e)
         {
             panelchangepass.Hide();
             panelbooks.Show();
         }
-
-        
-
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelchangepass.Show();
             panelbooks.Hide();
         }
-
         private void borrowedBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelchangepass.Hide();
             panelbooks.Show();
         }
-
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             login yeni = new login();
             yeni.Show();
             this.Hide();
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
 
             if (txtnewpass.Text.Length<6)
             {
-                MessageBox.Show("6 dan kucuk");
+                MessageBox.Show("Olusturmak Istediginiz Sifre En Az 6 Degerden Olusmali");
             }
             else if(txtnewpass.Text.Length>=6 || txtconfirmpass.Text==txtnewpass.Text)
             {
@@ -93,11 +82,9 @@ namespace end
             }
             else
             {
-                MessageBox.Show("Give True Valid");
-            }
-           
+                MessageBox.Show("Istenmeyen Karakterler Var");
+            } 
         }
-
         private void user_Load(object sender, EventArgs e)
         {
             label1.Text = datasource.Rows[0][1].ToString();
@@ -119,7 +106,12 @@ namespace end
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Contact us at canyil97@hotmail.com", "You Need Help ?");
+            MessageBox.Show("Bizimle Iletisime Gec canyil97@hotmail.com", "Yardima mi ihtiyacin var ?");
+        }
+
+        private void user_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         

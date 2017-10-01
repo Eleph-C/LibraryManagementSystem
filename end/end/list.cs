@@ -40,7 +40,6 @@ namespace end
         {
             showdata();
         }
-
         private void list_Load(object sender, EventArgs e)
         {
             showdata();
@@ -58,11 +57,6 @@ namespace end
                 kitap.KutuphanedeKitapAra();
                 //Veritabani.KitapAra(booksdata, comboitems.Text, txtitems.Text);
             }
-           
         }
-        
-
-       
-        
     }
 }

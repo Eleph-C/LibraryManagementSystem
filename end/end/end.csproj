@@ -73,6 +73,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Kitap.cs" />
+    <Compile Include="KutuphaneKurallari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KutuphaneKurallari.Designer.cs">
+      <DependentUpon>KutuphaneKurallari.cs</DependentUpon>
+    </Compile>
     <Compile Include="list.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KutuphaneKurallari.resx">
+      <DependentUpon>KutuphaneKurallari.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="list.resx">
       <DependentUpon>list.cs</DependentUpon>
@@ -199,6 +208,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libraryrules.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

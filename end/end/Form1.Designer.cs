@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fILEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bOOKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,7 +97,6 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.checkbooknamelbl = new System.Windows.Forms.Label();
             this.txtcheckbookname = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.checkouttime = new System.Windows.Forms.DateTimePicker();
             this.lblcheckout = new System.Windows.Forms.Label();
@@ -116,7 +115,6 @@
             this.panelwarning = new System.Windows.Forms.Panel();
             this.btnokey = new System.Windows.Forms.Button();
             this.picwarning = new System.Windows.Forms.PictureBox();
-            this.gizliadminlistesidata = new System.Windows.Forms.DataGridView();
             this.cantreachlbl = new System.Windows.Forms.Label();
             this.txtadminuser = new System.Windows.Forms.TextBox();
             this.btncancel = new System.Windows.Forms.Button();
@@ -160,20 +158,20 @@
             this.tabPage4.SuspendLayout();
             this.panelwarning.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picwarning)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gizliadminlistesidata)).BeginInit();
             this.paneladmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminlistesidata)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fILEToolStripMenuItem,
             this.hELPToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(956, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(956, 27);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -186,57 +184,61 @@
             this.nEWADMINToolStripMenuItem,
             this.tHEBOOKLISTToolStripMenuItem,
             this.sIGNOUTToolStripMenuItem});
+            this.fILEToolStripMenuItem.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.fILEToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.fILEToolStripMenuItem.Name = "fILEToolStripMenuItem";
             this.fILEToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D1)));
-            this.fILEToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.fILEToolStripMenuItem.Size = new System.Drawing.Size(62, 23);
             this.fILEToolStripMenuItem.Text = "Dosya";
             // 
             // bOOKToolStripMenuItem
             // 
             this.bOOKToolStripMenuItem.Name = "bOOKToolStripMenuItem";
-            this.bOOKToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.bOOKToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.bOOKToolStripMenuItem.Text = "Kitap";
             this.bOOKToolStripMenuItem.Click += new System.EventHandler(this.bOOKToolStripMenuItem_Click);
             // 
             // mEMBERToolStripMenuItem
             // 
             this.mEMBERToolStripMenuItem.Name = "mEMBERToolStripMenuItem";
-            this.mEMBERToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.mEMBERToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.mEMBERToolStripMenuItem.Text = "Uye";
             this.mEMBERToolStripMenuItem.Click += new System.EventHandler(this.mEMBERToolStripMenuItem_Click);
             // 
             // cHECKINOUTToolStripMenuItem
             // 
             this.cHECKINOUTToolStripMenuItem.Name = "cHECKINOUTToolStripMenuItem";
-            this.cHECKINOUTToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.cHECKINOUTToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.cHECKINOUTToolStripMenuItem.Text = "Check In/Out";
             this.cHECKINOUTToolStripMenuItem.Click += new System.EventHandler(this.cHECKINOUTToolStripMenuItem_Click);
             // 
             // nEWADMINToolStripMenuItem
             // 
             this.nEWADMINToolStripMenuItem.Name = "nEWADMINToolStripMenuItem";
-            this.nEWADMINToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.nEWADMINToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.nEWADMINToolStripMenuItem.Text = "Yonetici";
             this.nEWADMINToolStripMenuItem.Click += new System.EventHandler(this.nEWADMINToolStripMenuItem_Click);
             // 
             // tHEBOOKLISTToolStripMenuItem
             // 
             this.tHEBOOKLISTToolStripMenuItem.Name = "tHEBOOKLISTToolStripMenuItem";
-            this.tHEBOOKLISTToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.tHEBOOKLISTToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.tHEBOOKLISTToolStripMenuItem.Text = "Kitap Listesi";
             this.tHEBOOKLISTToolStripMenuItem.Click += new System.EventHandler(this.tHEBOOKLISTToolStripMenuItem_Click);
             // 
             // sIGNOUTToolStripMenuItem
             // 
             this.sIGNOUTToolStripMenuItem.Name = "sIGNOUTToolStripMenuItem";
-            this.sIGNOUTToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.sIGNOUTToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
             this.sIGNOUTToolStripMenuItem.Text = "Programi Kapat";
             this.sIGNOUTToolStripMenuItem.Click += new System.EventHandler(this.sIGNOUTToolStripMenuItem_Click);
             // 
             // hELPToolStripMenuItem
             // 
+            this.hELPToolStripMenuItem.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.hELPToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.hELPToolStripMenuItem.Name = "hELPToolStripMenuItem";
-            this.hELPToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.hELPToolStripMenuItem.Size = new System.Drawing.Size(68, 23);
             this.hELPToolStripMenuItem.Text = "Yardim";
             this.hELPToolStripMenuItem.Click += new System.EventHandler(this.hELPToolStripMenuItem_Click);
             // 
@@ -246,20 +248,21 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(0, 30);
+            this.tabControl1.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            this.tabControl1.Location = new System.Drawing.Point(-2, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(956, 521);
+            this.tabControl1.Size = new System.Drawing.Size(956, 555);
             this.tabControl1.TabIndex = 14;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.panelbooks);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(948, 495);
+            this.tabPage1.Size = new System.Drawing.Size(948, 523);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Kitap Paneli";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -289,14 +292,14 @@
             "KitapAdi",
             "KitapYazari",
             "KitapSayfaSayisi",
-            "KitapYayinci",
             "KitapKategori",
+            "KitapYayinci",
             "KitapTercumani",
-            "KitapYayinTarihi",
-            "KitapSahibi"});
-            this.comboitems.Location = new System.Drawing.Point(521, 70);
+            "KitapYayinTarihi\t",
+            "KitabinVerildigiKisi"});
+            this.comboitems.Location = new System.Drawing.Point(493, 70);
             this.comboitems.Name = "comboitems";
-            this.comboitems.Size = new System.Drawing.Size(131, 21);
+            this.comboitems.Size = new System.Drawing.Size(159, 27);
             this.comboitems.TabIndex = 70;
             this.comboitems.Text = "KitapAdi";
             this.comboitems.SelectedIndexChanged += new System.EventHandler(this.comboitems_SelectedIndexChanged);
@@ -306,7 +309,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Palatino Linotype", 18F);
             this.label24.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label24.Location = new System.Drawing.Point(211, 2);
+            this.label24.Location = new System.Drawing.Point(425, 5);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(279, 32);
             this.label24.TabIndex = 75;
@@ -320,7 +323,7 @@
             this.clearbtn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.clearbtn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearbtn1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.clearbtn1.Location = new System.Drawing.Point(605, 284);
+            this.clearbtn1.Location = new System.Drawing.Point(722, 280);
             this.clearbtn1.Name = "clearbtn1";
             this.clearbtn1.Size = new System.Drawing.Size(155, 30);
             this.clearbtn1.TabIndex = 38;
@@ -336,9 +339,9 @@
             this.editbtn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.editbtn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.editbtn1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.editbtn1.Location = new System.Drawing.Point(283, 284);
+            this.editbtn1.Location = new System.Drawing.Point(444, 182);
             this.editbtn1.Name = "editbtn1";
-            this.editbtn1.Size = new System.Drawing.Size(155, 30);
+            this.editbtn1.Size = new System.Drawing.Size(185, 50);
             this.editbtn1.TabIndex = 36;
             this.editbtn1.Text = "Duzenle";
             this.editbtn1.UseVisualStyleBackColor = true;
@@ -349,7 +352,7 @@
             this.searchlbl.AutoSize = true;
             this.searchlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.searchlbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.searchlbl.Location = new System.Drawing.Point(517, 43);
+            this.searchlbl.Location = new System.Drawing.Point(489, 47);
             this.searchlbl.Name = "searchlbl";
             this.searchlbl.Size = new System.Drawing.Size(82, 20);
             this.searchlbl.TabIndex = 72;
@@ -358,8 +361,9 @@
             // txtsearch
             // 
             this.txtsearch.Location = new System.Drawing.Point(659, 70);
+            this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(174, 20);
+            this.txtsearch.Size = new System.Drawing.Size(190, 27);
             this.txtsearch.TabIndex = 71;
             this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
@@ -371,9 +375,9 @@
             this.deletebtn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.deletebtn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deletebtn1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.deletebtn1.Location = new System.Drawing.Point(444, 284);
+            this.deletebtn1.Location = new System.Drawing.Point(635, 182);
             this.deletebtn1.Name = "deletebtn1";
-            this.deletebtn1.Size = new System.Drawing.Size(155, 30);
+            this.deletebtn1.Size = new System.Drawing.Size(183, 50);
             this.deletebtn1.TabIndex = 37;
             this.deletebtn1.Text = "Sil";
             this.deletebtn1.UseVisualStyleBackColor = true;
@@ -387,9 +391,9 @@
             this.addbtn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.addbtn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbtn1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.addbtn1.Location = new System.Drawing.Point(121, 284);
+            this.addbtn1.Location = new System.Drawing.Point(6, 283);
             this.addbtn1.Name = "addbtn1";
-            this.addbtn1.Size = new System.Drawing.Size(155, 30);
+            this.addbtn1.Size = new System.Drawing.Size(417, 30);
             this.addbtn1.TabIndex = 35;
             this.addbtn1.Text = "Ekle";
             this.addbtn1.UseVisualStyleBackColor = true;
@@ -397,11 +401,11 @@
             // 
             // kitaplistesidata
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
-            this.kitaplistesidata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.kitaplistesidata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.kitaplistesidata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.kitaplistesidata.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.kitaplistesidata.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -432,30 +436,31 @@
             this.groupBox2.Controls.Add(this.bookathrlbl);
             this.groupBox2.Controls.Add(this.booknamelbl);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox2.Location = new System.Drawing.Point(6, 28);
+            this.groupBox2.Location = new System.Drawing.Point(6, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(432, 256);
+            this.groupBox2.Size = new System.Drawing.Size(417, 275);
             this.groupBox2.TabIndex = 74;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kitap Bilgileri";
             // 
             // brkodbtn
             // 
+            this.brkodbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.brkodbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.brkodbtn.Location = new System.Drawing.Point(343, 11);
+            this.brkodbtn.Location = new System.Drawing.Point(328, 24);
             this.brkodbtn.Name = "brkodbtn";
             this.brkodbtn.Size = new System.Drawing.Size(71, 24);
             this.brkodbtn.TabIndex = 50;
-            this.brkodbtn.Text = "Yeni Numara";
+            this.brkodbtn.Text = "Numara Ver";
             this.brkodbtn.UseVisualStyleBackColor = true;
             this.brkodbtn.Click += new System.EventHandler(this.brkodbtn_Click);
             // 
             // txtbooknumber
             // 
             this.txtbooknumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtbooknumber.Location = new System.Drawing.Point(159, 11);
+            this.txtbooknumber.Location = new System.Drawing.Point(124, 24);
             this.txtbooknumber.Name = "txtbooknumber";
-            this.txtbooknumber.Size = new System.Drawing.Size(172, 24);
+            this.txtbooknumber.Size = new System.Drawing.Size(192, 24);
             this.txtbooknumber.TabIndex = 27;
             // 
             // bookbarkodlbl
@@ -463,7 +468,7 @@
             this.bookbarkodlbl.AutoSize = true;
             this.bookbarkodlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bookbarkodlbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bookbarkodlbl.Location = new System.Drawing.Point(75, 9);
+            this.bookbarkodlbl.Location = new System.Drawing.Point(45, 22);
             this.bookbarkodlbl.Name = "bookbarkodlbl";
             this.bookbarkodlbl.Size = new System.Drawing.Size(73, 20);
             this.bookbarkodlbl.TabIndex = 26;
@@ -472,7 +477,7 @@
             // txtbookdate
             // 
             this.txtbookdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtbookdate.Location = new System.Drawing.Point(159, 229);
+            this.txtbookdate.Location = new System.Drawing.Point(124, 242);
             this.txtbookdate.Name = "txtbookdate";
             this.txtbookdate.Size = new System.Drawing.Size(119, 24);
             this.txtbookdate.TabIndex = 34;
@@ -480,9 +485,9 @@
             // txtbookname
             // 
             this.txtbookname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtbookname.Location = new System.Drawing.Point(159, 39);
+            this.txtbookname.Location = new System.Drawing.Point(124, 52);
             this.txtbookname.Name = "txtbookname";
-            this.txtbookname.Size = new System.Drawing.Size(172, 24);
+            this.txtbookname.Size = new System.Drawing.Size(192, 24);
             this.txtbookname.TabIndex = 28;
             // 
             // bookdatelbl
@@ -490,7 +495,7 @@
             this.bookdatelbl.AutoSize = true;
             this.bookdatelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bookdatelbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bookdatelbl.Location = new System.Drawing.Point(48, 229);
+            this.bookdatelbl.Location = new System.Drawing.Point(18, 242);
             this.bookdatelbl.Name = "bookdatelbl";
             this.bookdatelbl.Size = new System.Drawing.Size(98, 20);
             this.bookdatelbl.TabIndex = 23;
@@ -499,9 +504,9 @@
             // txtbooktranslated
             // 
             this.txtbooktranslated.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtbooktranslated.Location = new System.Drawing.Point(159, 196);
+            this.txtbooktranslated.Location = new System.Drawing.Point(124, 209);
             this.txtbooktranslated.Name = "txtbooktranslated";
-            this.txtbooktranslated.Size = new System.Drawing.Size(173, 24);
+            this.txtbooktranslated.Size = new System.Drawing.Size(193, 24);
             this.txtbooktranslated.TabIndex = 33;
             // 
             // booktranslatedlbl
@@ -509,7 +514,7 @@
             this.booktranslatedlbl.AutoSize = true;
             this.booktranslatedlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.booktranslatedlbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.booktranslatedlbl.Location = new System.Drawing.Point(58, 196);
+            this.booktranslatedlbl.Location = new System.Drawing.Point(28, 209);
             this.booktranslatedlbl.Name = "booktranslatedlbl";
             this.booktranslatedlbl.Size = new System.Drawing.Size(88, 20);
             this.booktranslatedlbl.TabIndex = 21;
@@ -533,9 +538,9 @@
             "NOVEL",
             "POLITICS",
             "HEALTH"});
-            this.combobookcategory.Location = new System.Drawing.Point(159, 135);
+            this.combobookcategory.Location = new System.Drawing.Point(124, 144);
             this.combobookcategory.Name = "combobookcategory";
-            this.combobookcategory.Size = new System.Drawing.Size(121, 21);
+            this.combobookcategory.Size = new System.Drawing.Size(192, 27);
             this.combobookcategory.TabIndex = 31;
             // 
             // bookctgrylbl
@@ -543,7 +548,7 @@
             this.bookctgrylbl.AutoSize = true;
             this.bookctgrylbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bookctgrylbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bookctgrylbl.Location = new System.Drawing.Point(71, 133);
+            this.bookctgrylbl.Location = new System.Drawing.Point(41, 146);
             this.bookctgrylbl.Name = "bookctgrylbl";
             this.bookctgrylbl.Size = new System.Drawing.Size(76, 20);
             this.bookctgrylbl.TabIndex = 10;
@@ -552,9 +557,9 @@
             // txtbookpublisher
             // 
             this.txtbookpublisher.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtbookpublisher.Location = new System.Drawing.Point(159, 162);
+            this.txtbookpublisher.Location = new System.Drawing.Point(124, 175);
             this.txtbookpublisher.Name = "txtbookpublisher";
-            this.txtbookpublisher.Size = new System.Drawing.Size(172, 24);
+            this.txtbookpublisher.Size = new System.Drawing.Size(192, 24);
             this.txtbookpublisher.TabIndex = 32;
             // 
             // bookpublisherlbl
@@ -562,7 +567,7 @@
             this.bookpublisherlbl.AutoSize = true;
             this.bookpublisherlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bookpublisherlbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bookpublisherlbl.Location = new System.Drawing.Point(79, 162);
+            this.bookpublisherlbl.Location = new System.Drawing.Point(49, 175);
             this.bookpublisherlbl.Name = "bookpublisherlbl";
             this.bookpublisherlbl.Size = new System.Drawing.Size(67, 20);
             this.bookpublisherlbl.TabIndex = 8;
@@ -571,9 +576,9 @@
             // txtbookpage
             // 
             this.txtbookpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtbookpage.Location = new System.Drawing.Point(159, 103);
+            this.txtbookpage.Location = new System.Drawing.Point(124, 114);
             this.txtbookpage.Name = "txtbookpage";
-            this.txtbookpage.Size = new System.Drawing.Size(121, 24);
+            this.txtbookpage.Size = new System.Drawing.Size(119, 24);
             this.txtbookpage.TabIndex = 30;
             // 
             // bookpagelbl
@@ -581,7 +586,7 @@
             this.bookpagelbl.AutoSize = true;
             this.bookpagelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bookpagelbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bookpagelbl.Location = new System.Drawing.Point(44, 101);
+            this.bookpagelbl.Location = new System.Drawing.Point(14, 114);
             this.bookpagelbl.Name = "bookpagelbl";
             this.bookpagelbl.Size = new System.Drawing.Size(103, 20);
             this.bookpagelbl.TabIndex = 6;
@@ -590,9 +595,9 @@
             // txtbookauthor
             // 
             this.txtbookauthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtbookauthor.Location = new System.Drawing.Point(159, 68);
+            this.txtbookauthor.Location = new System.Drawing.Point(124, 81);
             this.txtbookauthor.Name = "txtbookauthor";
-            this.txtbookauthor.Size = new System.Drawing.Size(172, 24);
+            this.txtbookauthor.Size = new System.Drawing.Size(192, 24);
             this.txtbookauthor.TabIndex = 29;
             // 
             // bookathrlbl
@@ -600,7 +605,7 @@
             this.bookathrlbl.AutoSize = true;
             this.bookathrlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bookathrlbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bookathrlbl.Location = new System.Drawing.Point(87, 70);
+            this.bookathrlbl.Location = new System.Drawing.Point(57, 83);
             this.bookathrlbl.Name = "bookathrlbl";
             this.bookathrlbl.Size = new System.Drawing.Size(59, 20);
             this.bookathrlbl.TabIndex = 4;
@@ -611,7 +616,7 @@
             this.booknamelbl.AutoSize = true;
             this.booknamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.booknamelbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.booknamelbl.Location = new System.Drawing.Point(109, 39);
+            this.booknamelbl.Location = new System.Drawing.Point(79, 52);
             this.booknamelbl.Name = "booknamelbl";
             this.booknamelbl.Size = new System.Drawing.Size(37, 20);
             this.booknamelbl.TabIndex = 2;
@@ -620,10 +625,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panelmember);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(948, 495);
+            this.tabPage2.Size = new System.Drawing.Size(948, 523);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Uye Paneli";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -677,9 +682,9 @@
             this.membershowlist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.membershowlist.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.membershowlist.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.membershowlist.Location = new System.Drawing.Point(550, 426);
+            this.membershowlist.Location = new System.Drawing.Point(509, 426);
             this.membershowlist.Name = "membershowlist";
-            this.membershowlist.Size = new System.Drawing.Size(92, 25);
+            this.membershowlist.Size = new System.Drawing.Size(133, 25);
             this.membershowlist.TabIndex = 72;
             this.membershowlist.Text = "Listeyi Yenile";
             this.membershowlist.UseVisualStyleBackColor = true;
@@ -701,7 +706,7 @@
             // 
             this.txtmemberpass.Location = new System.Drawing.Point(185, 210);
             this.txtmemberpass.Name = "txtmemberpass";
-            this.txtmemberpass.Size = new System.Drawing.Size(183, 20);
+            this.txtmemberpass.Size = new System.Drawing.Size(183, 24);
             this.txtmemberpass.TabIndex = 88;
             // 
             // generatepassmember
@@ -807,8 +812,8 @@
             // 
             // memberlistesidata
             // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.LightBlue;
-            this.memberlistesidata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.LightBlue;
+            this.memberlistesidata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.memberlistesidata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.memberlistesidata.Location = new System.Drawing.Point(99, 274);
             this.memberlistesidata.Name = "memberlistesidata";
@@ -875,10 +880,10 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.panelcheck);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(948, 495);
+            this.tabPage3.Size = new System.Drawing.Size(948, 523);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Check In/Out Paneli";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -909,7 +914,6 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.checkbooknamelbl);
             this.flowLayoutPanel1.Controls.Add(this.txtcheckbookname);
-            this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(208, 97);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(542, 33);
@@ -930,24 +934,9 @@
             // 
             this.txtcheckbookname.Location = new System.Drawing.Point(93, 3);
             this.txtcheckbookname.Name = "txtcheckbookname";
-            this.txtcheckbookname.Size = new System.Drawing.Size(168, 20);
+            this.txtcheckbookname.Size = new System.Drawing.Size(188, 24);
             this.txtcheckbookname.TabIndex = 92;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(267, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 24);
-            this.button1.TabIndex = 91;
-            this.button1.Text = "Ara";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtcheckbookname.TextChanged += new System.EventHandler(this.txtcheckbookname_TextChanged);
             // 
             // comboBox1
             // 
@@ -957,14 +946,14 @@
             "KitapAdi",
             "KitapYazari",
             "KitapSayfaSayisi",
-            "KitapYayinci",
             "KitapKategori",
+            "KitapYayinci",
             "KitapTercumani",
-            "KitapYayinTarihi",
-            "KitapSahibi"});
-            this.comboBox1.Location = new System.Drawing.Point(321, 62);
+            "KitapYayinTarihi\t",
+            "KitabinVerildigiKisi"});
+            this.comboBox1.Location = new System.Drawing.Point(208, 64);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(117, 21);
+            this.comboBox1.Size = new System.Drawing.Size(148, 27);
             this.comboBox1.TabIndex = 86;
             this.comboBox1.Text = "KitapAdi";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -974,7 +963,7 @@
             this.checkouttime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.checkouttime.Location = new System.Drawing.Point(628, 197);
             this.checkouttime.Name = "checkouttime";
-            this.checkouttime.Size = new System.Drawing.Size(104, 20);
+            this.checkouttime.Size = new System.Drawing.Size(104, 24);
             this.checkouttime.TabIndex = 85;
             // 
             // lblcheckout
@@ -1028,7 +1017,7 @@
             this.takendatetime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.takendatetime.Location = new System.Drawing.Point(252, 196);
             this.takendatetime.Name = "takendatetime";
-            this.takendatetime.Size = new System.Drawing.Size(104, 20);
+            this.takendatetime.Size = new System.Drawing.Size(104, 24);
             this.takendatetime.TabIndex = 79;
             // 
             // btnrefresh
@@ -1039,9 +1028,9 @@
             this.btnrefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnrefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnrefresh.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnrefresh.Location = new System.Drawing.Point(784, 430);
+            this.btnrefresh.Location = new System.Drawing.Point(749, 430);
             this.btnrefresh.Name = "btnrefresh";
-            this.btnrefresh.Size = new System.Drawing.Size(92, 25);
+            this.btnrefresh.Size = new System.Drawing.Size(127, 25);
             this.btnrefresh.TabIndex = 66;
             this.btnrefresh.Text = "Listeyi Yenile";
             this.btnrefresh.UseVisualStyleBackColor = true;
@@ -1063,15 +1052,15 @@
             this.givendatetime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.givendatetime.Location = new System.Drawing.Point(252, 171);
             this.givendatetime.Name = "givendatetime";
-            this.givendatetime.Size = new System.Drawing.Size(104, 20);
+            this.givendatetime.Size = new System.Drawing.Size(104, 24);
             this.givendatetime.TabIndex = 77;
             this.givendatetime.Value = new System.DateTime(2017, 4, 15, 0, 0, 0, 0);
             this.givendatetime.ValueChanged += new System.EventHandler(this.takendatetime_ValueChanged);
             // 
             // kitaplistesidata2
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.LightBlue;
-            this.kitaplistesidata2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.LightBlue;
+            this.kitaplistesidata2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.kitaplistesidata2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kitaplistesidata2.Location = new System.Drawing.Point(5, 274);
             this.kitaplistesidata2.Name = "kitaplistesidata2";
@@ -1116,12 +1105,12 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.paneladmin);
             this.tabPage4.Controls.Add(this.panelwarning);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Controls.Add(this.paneladmin);
+            this.tabPage4.Location = new System.Drawing.Point(4, 28);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(946, 495);
+            this.tabPage4.Size = new System.Drawing.Size(948, 523);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Yonetici Paneli";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1130,7 +1119,6 @@
             // 
             this.panelwarning.Controls.Add(this.btnokey);
             this.panelwarning.Controls.Add(this.picwarning);
-            this.panelwarning.Controls.Add(this.gizliadminlistesidata);
             this.panelwarning.Controls.Add(this.cantreachlbl);
             this.panelwarning.Controls.Add(this.txtadminuser);
             this.panelwarning.Controls.Add(this.btncancel);
@@ -1144,9 +1132,11 @@
             // 
             // btnokey
             // 
+            this.btnokey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnokey.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnokey.Location = new System.Drawing.Point(440, 216);
             this.btnokey.Name = "btnokey";
-            this.btnokey.Size = new System.Drawing.Size(105, 23);
+            this.btnokey.Size = new System.Drawing.Size(224, 42);
             this.btnokey.TabIndex = 3;
             this.btnokey.Text = "Giris Yap";
             this.btnokey.UseVisualStyleBackColor = true;
@@ -1155,43 +1145,38 @@
             // picwarning
             // 
             this.picwarning.Image = ((System.Drawing.Image)(resources.GetObject("picwarning.Image")));
-            this.picwarning.Location = new System.Drawing.Point(208, 142);
+            this.picwarning.Location = new System.Drawing.Point(158, 142);
             this.picwarning.Name = "picwarning";
-            this.picwarning.Size = new System.Drawing.Size(100, 97);
+            this.picwarning.Size = new System.Drawing.Size(116, 116);
             this.picwarning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picwarning.TabIndex = 7;
             this.picwarning.TabStop = false;
             // 
-            // gizliadminlistesidata
-            // 
-            this.gizliadminlistesidata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gizliadminlistesidata.Location = new System.Drawing.Point(469, 224);
-            this.gizliadminlistesidata.Name = "gizliadminlistesidata";
-            this.gizliadminlistesidata.Size = new System.Drawing.Size(10, 10);
-            this.gizliadminlistesidata.TabIndex = 8;
-            // 
             // cantreachlbl
             // 
             this.cantreachlbl.AutoSize = true;
-            this.cantreachlbl.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantreachlbl.Location = new System.Drawing.Point(206, 110);
+            this.cantreachlbl.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantreachlbl.Location = new System.Drawing.Point(154, 97);
             this.cantreachlbl.Name = "cantreachlbl";
-            this.cantreachlbl.Size = new System.Drawing.Size(106, 18);
+            this.cantreachlbl.Size = new System.Drawing.Size(137, 24);
             this.cantreachlbl.TabIndex = 6;
             this.cantreachlbl.Text = "Yonetici Girisi";
             // 
             // txtadminuser
             // 
-            this.txtadminuser.Location = new System.Drawing.Point(416, 142);
+            this.txtadminuser.Location = new System.Drawing.Point(387, 142);
+            this.txtadminuser.Multiline = true;
             this.txtadminuser.Name = "txtadminuser";
-            this.txtadminuser.Size = new System.Drawing.Size(129, 20);
+            this.txtadminuser.Size = new System.Drawing.Size(277, 23);
             this.txtadminuser.TabIndex = 0;
             // 
             // btncancel
             // 
-            this.btncancel.Location = new System.Drawing.Point(334, 216);
+            this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancel.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btncancel.Location = new System.Drawing.Point(305, 216);
             this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(100, 23);
+            this.btncancel.Size = new System.Drawing.Size(129, 42);
             this.btncancel.TabIndex = 2;
             this.btncancel.Text = "Iptal";
             this.btncancel.UseVisualStyleBackColor = true;
@@ -1199,29 +1184,29 @@
             // 
             // txtadminpass
             // 
-            this.txtadminpass.Location = new System.Drawing.Point(416, 180);
+            this.txtadminpass.Location = new System.Drawing.Point(387, 180);
             this.txtadminpass.Name = "txtadminpass";
-            this.txtadminpass.Size = new System.Drawing.Size(129, 20);
+            this.txtadminpass.Size = new System.Drawing.Size(277, 24);
             this.txtadminpass.TabIndex = 1;
             this.txtadminpass.UseSystemPasswordChar = true;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(330, 141);
+            this.label30.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(301, 141);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(36, 18);
+            this.label30.Size = new System.Drawing.Size(76, 24);
             this.label30.TabIndex = 2;
-            this.label30.Text = "Ad :";
+            this.label30.Text = "Email :";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(331, 179);
+            this.label31.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(315, 179);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(48, 18);
+            this.label31.Size = new System.Drawing.Size(62, 24);
             this.label31.TabIndex = 3;
             this.label31.Text = "Sifre :";
             // 
@@ -1287,7 +1272,7 @@
             "Worker"});
             this.jobs.Location = new System.Drawing.Point(249, 212);
             this.jobs.Name = "jobs";
-            this.jobs.Size = new System.Drawing.Size(110, 21);
+            this.jobs.Size = new System.Drawing.Size(110, 27);
             this.jobs.TabIndex = 70;
             // 
             // txtadmintc
@@ -1317,9 +1302,9 @@
             this.adminshowlist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.adminshowlist.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.adminshowlist.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.adminshowlist.Location = new System.Drawing.Point(671, 438);
+            this.adminshowlist.Location = new System.Drawing.Point(627, 438);
             this.adminshowlist.Name = "adminshowlist";
-            this.adminshowlist.Size = new System.Drawing.Size(92, 25);
+            this.adminshowlist.Size = new System.Drawing.Size(136, 25);
             this.adminshowlist.TabIndex = 79;
             this.adminshowlist.Text = "Listeyi Yenile";
             this.adminshowlist.UseVisualStyleBackColor = true;
@@ -1340,7 +1325,7 @@
             // 
             this.txtadminpassword.Location = new System.Drawing.Point(249, 182);
             this.txtadminpassword.Name = "txtadminpassword";
-            this.txtadminpassword.Size = new System.Drawing.Size(159, 20);
+            this.txtadminpassword.Size = new System.Drawing.Size(159, 24);
             this.txtadminpassword.TabIndex = 69;
             // 
             // generatepassadmin
@@ -1424,9 +1409,9 @@
             // 
             // adminlistesidata
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.adminlistesidata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.adminlistesidata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
             this.adminlistesidata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.adminlistesidata.Location = new System.Drawing.Point(120, 286);
             this.adminlistesidata.Name = "adminlistesidata";
@@ -1492,6 +1477,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(956, 581);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
@@ -1504,6 +1490,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C&U LIBRARY";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -1528,7 +1515,6 @@
             this.panelwarning.ResumeLayout(false);
             this.panelwarning.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picwarning)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gizliadminlistesidata)).EndInit();
             this.paneladmin.ResumeLayout(false);
             this.paneladmin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminlistesidata)).EndInit();
@@ -1603,7 +1589,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label checkbooknamelbl;
         public System.Windows.Forms.TextBox txtcheckbookname;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DateTimePicker checkouttime;
         private System.Windows.Forms.Label lblcheckout;
@@ -1622,7 +1607,6 @@
         public System.Windows.Forms.Panel panelwarning;
         private System.Windows.Forms.Button btnokey;
         private System.Windows.Forms.PictureBox picwarning;
-        private System.Windows.Forms.DataGridView gizliadminlistesidata;
         private System.Windows.Forms.Label cantreachlbl;
         public System.Windows.Forms.TextBox txtadminuser;
         private System.Windows.Forms.Button btncancel;

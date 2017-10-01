@@ -64,14 +64,11 @@
             // btnrefresh
             // 
             this.btnrefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnrefresh.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnrefresh.FlatAppearance.BorderSize = 2;
-            this.btnrefresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.btnrefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnrefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnrefresh.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnrefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnrefresh.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnrefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnrefresh.Location = new System.Drawing.Point(765, 360);
+            this.btnrefresh.ForeColor = System.Drawing.Color.White;
+            this.btnrefresh.Location = new System.Drawing.Point(756, 339);
             this.btnrefresh.Name = "btnrefresh";
             this.btnrefresh.Size = new System.Drawing.Size(100, 37);
             this.btnrefresh.TabIndex = 3;
@@ -83,24 +80,25 @@
             // 
             this.comboitems.FormattingEnabled = true;
             this.comboitems.Items.AddRange(new object[] {
+            "KitapNumarasi",
             "KitapAdi",
             "KitapYazari",
             "KitapSayfaSayisi",
-            "KitapYayinci",
             "KitapKategori",
+            "KitapYayinci",
             "KitapTercumani",
-            "KitapYayinTarihi",
-            "KitapSahibi"});
-            this.comboitems.Location = new System.Drawing.Point(210, 3);
+            "KitapYayinTarihi\t",
+            "KitabinVerildigiKisi"});
+            this.comboitems.Location = new System.Drawing.Point(172, 7);
             this.comboitems.Name = "comboitems";
-            this.comboitems.Size = new System.Drawing.Size(121, 21);
+            this.comboitems.Size = new System.Drawing.Size(171, 21);
             this.comboitems.TabIndex = 0;
             // 
             // txtitems
             // 
-            this.txtitems.Location = new System.Drawing.Point(210, 39);
+            this.txtitems.Location = new System.Drawing.Point(172, 43);
             this.txtitems.Name = "txtitems";
-            this.txtitems.Size = new System.Drawing.Size(121, 20);
+            this.txtitems.Size = new System.Drawing.Size(171, 20);
             this.txtitems.TabIndex = 1;
             this.txtitems.TextChanged += new System.EventHandler(this.txtitems_TextChanged);
             // 
@@ -108,21 +106,23 @@
             // 
             this.lblcolumn.AutoSize = true;
             this.lblcolumn.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcolumn.Location = new System.Drawing.Point(19, 3);
+            this.lblcolumn.ForeColor = System.Drawing.Color.White;
+            this.lblcolumn.Location = new System.Drawing.Point(13, 7);
             this.lblcolumn.Name = "lblcolumn";
-            this.lblcolumn.Size = new System.Drawing.Size(173, 21);
+            this.lblcolumn.Size = new System.Drawing.Size(152, 21);
             this.lblcolumn.TabIndex = 5;
-            this.lblcolumn.Text = "Choose The Column :";
+            this.lblcolumn.Text = "Aranacak Bolum :";
             // 
             // lblitem
             // 
             this.lblitem.AutoSize = true;
             this.lblitem.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblitem.Location = new System.Drawing.Point(46, 36);
+            this.lblitem.ForeColor = System.Drawing.Color.White;
+            this.lblitem.Location = new System.Drawing.Point(54, 40);
             this.lblitem.Name = "lblitem";
-            this.lblitem.Size = new System.Drawing.Size(146, 21);
+            this.lblitem.Size = new System.Drawing.Size(110, 21);
             this.lblitem.TabIndex = 6;
-            this.lblitem.Text = "Write The Item  :";
+            this.lblitem.Text = "Aranan Oge :";
             // 
             // paneltools
             // 
@@ -133,15 +133,15 @@
             this.paneltools.Controls.Add(this.comboitems);
             this.paneltools.Location = new System.Drawing.Point(285, 305);
             this.paneltools.Name = "paneltools";
-            this.paneltools.Size = new System.Drawing.Size(367, 92);
+            this.paneltools.Size = new System.Drawing.Size(386, 71);
             this.paneltools.TabIndex = 7;
             // 
             // list
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(868, 411);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(868, 385);
             this.Controls.Add(this.paneltools);
             this.Controls.Add(this.btnrefresh);
             this.Controls.Add(this.booksdata);

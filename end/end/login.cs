@@ -23,14 +23,10 @@ namespace end
                 return handleParam;
             }
         }
-        public string txt;
         public login()
-        {
-            
+        {            
             InitializeComponent();
-            booksdata.Visible = false;
-            piclibraryrules.Hide();
-            
+            booksdata.Visible = false;            
         }
         Kitap kitap;
         
@@ -44,39 +40,24 @@ namespace end
         }
         private void btnuserlogin_Click(object sender, EventArgs e)
         {
-            //tabControl1.SelectTab(1);
             UyeGirisFormu uyegirisformu = new UyeGirisFormu();
             uyegirisformu.Show();
             this.Hide();
         }
-
         private void btnadminlogin_Click(object sender, EventArgs e)
         {
-            //tabControl1.SelectTab(2);
             AdminGirisFormu admingirisformu = new AdminGirisFormu();
             admingirisformu.Show();
             this.Hide();
         }
-
         private void login_Load(object sender, EventArgs e)
-        {
-            
+        {            
             showkitap();
         }
-
         private void btnrules_Click(object sender, EventArgs e)
         {
-           
-            piclibraryrules.Visible = true;
-            btnrules2.Visible = true;
-            btnrules.Visible = false;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            piclibraryrules.Visible = false;
-            btnrules2.Visible = false;
-            btnrules.Visible = true;
+            KutuphaneKurallari kutuphanekurallari = new KutuphaneKurallari();
+            kutuphanekurallari.ShowDialog();
         }
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
@@ -98,15 +79,14 @@ namespace end
                 booksdata.ClearSelection();
             }
         }
-
         private void login_Click(object sender, EventArgs e)
         {
             booksdata.Visible = false;
             //txtsearch.Text = "";
         }
-
-        
-
-       
+        private void login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

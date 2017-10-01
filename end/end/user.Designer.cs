@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(user));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnborrowedbooks = new System.Windows.Forms.Button();
-            this.btnchangepass = new System.Windows.Forms.Button();
+            this.btnkitaplariniz = new System.Windows.Forms.Button();
+            this.btnsifredegis = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnclear = new System.Windows.Forms.Button();
             this.btnresetpass = new System.Windows.Forms.Button();
@@ -48,69 +47,53 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrowedBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panelchangepass.SuspendLayout();
             this.panelbooks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.booksdata)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // btnkitaplariniz
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.btnborrowedbooks);
-            this.groupBox1.Controls.Add(this.btnchangepass);
-            this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(0, 135);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(133, 286);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "MENU";
+            this.btnkitaplariniz.BackColor = System.Drawing.Color.Transparent;
+            this.btnkitaplariniz.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnkitaplariniz.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnkitaplariniz.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnkitaplariniz.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnkitaplariniz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnkitaplariniz.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnkitaplariniz.ForeColor = System.Drawing.Color.White;
+            this.btnkitaplariniz.Location = new System.Drawing.Point(12, 173);
+            this.btnkitaplariniz.Name = "btnkitaplariniz";
+            this.btnkitaplariniz.Size = new System.Drawing.Size(116, 58);
+            this.btnkitaplariniz.TabIndex = 0;
+            this.btnkitaplariniz.Text = "Kitaplariniz";
+            this.btnkitaplariniz.UseVisualStyleBackColor = false;
+            this.btnkitaplariniz.Click += new System.EventHandler(this.btnkitaplariniz_Click);
             // 
-            // btnborrowedbooks
+            // btnsifredegis
             // 
-            this.btnborrowedbooks.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnborrowedbooks.FlatAppearance.BorderSize = 2;
-            this.btnborrowedbooks.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnborrowedbooks.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnborrowedbooks.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnborrowedbooks.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnborrowedbooks.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnborrowedbooks.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnborrowedbooks.Location = new System.Drawing.Point(6, 61);
-            this.btnborrowedbooks.Name = "btnborrowedbooks";
-            this.btnborrowedbooks.Size = new System.Drawing.Size(116, 58);
-            this.btnborrowedbooks.TabIndex = 0;
-            this.btnborrowedbooks.Text = "Borrowed Books";
-            this.btnborrowedbooks.UseVisualStyleBackColor = true;
-            this.btnborrowedbooks.Click += new System.EventHandler(this.btnborrowedbooks_Click);
-            // 
-            // btnchangepass
-            // 
-            this.btnchangepass.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnchangepass.FlatAppearance.BorderSize = 2;
-            this.btnchangepass.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnchangepass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnchangepass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnchangepass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnchangepass.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnchangepass.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnchangepass.Location = new System.Drawing.Point(6, 193);
-            this.btnchangepass.Name = "btnchangepass";
-            this.btnchangepass.Size = new System.Drawing.Size(116, 59);
-            this.btnchangepass.TabIndex = 1;
-            this.btnchangepass.Text = "Change Password";
-            this.btnchangepass.UseVisualStyleBackColor = true;
-            this.btnchangepass.Click += new System.EventHandler(this.btnchangepass_Click);
+            this.btnsifredegis.BackColor = System.Drawing.Color.Transparent;
+            this.btnsifredegis.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnsifredegis.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnsifredegis.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnsifredegis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnsifredegis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsifredegis.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnsifredegis.ForeColor = System.Drawing.Color.White;
+            this.btnsifredegis.Location = new System.Drawing.Point(12, 305);
+            this.btnsifredegis.Name = "btnsifredegis";
+            this.btnsifredegis.Size = new System.Drawing.Size(116, 59);
+            this.btnsifredegis.TabIndex = 1;
+            this.btnsifredegis.Text = "Sifreni Degistir";
+            this.btnsifredegis.UseVisualStyleBackColor = false;
+            this.btnsifredegis.Click += new System.EventHandler(this.btnsifredegis_Click);
             // 
             // groupBox2
             // 
@@ -120,29 +103,29 @@
             this.groupBox2.Controls.Add(this.txtnewpass);
             this.groupBox2.Controls.Add(this.lblconfirmpass);
             this.groupBox2.Controls.Add(this.lblnewpass);
-            this.groupBox2.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.groupBox2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(31, 26);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(342, 296);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "CHANGE PASSWORD";
+            this.groupBox2.Text = "Sifre Degis";
             // 
             // btnclear
             // 
             this.btnclear.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnclear.FlatAppearance.BorderSize = 2;
-            this.btnclear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.btnclear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnclear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnclear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclear.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnclear.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnclear.Location = new System.Drawing.Point(72, 207);
+            this.btnclear.ForeColor = System.Drawing.Color.White;
+            this.btnclear.Location = new System.Drawing.Point(22, 196);
             this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(221, 31);
+            this.btnclear.Size = new System.Drawing.Size(295, 31);
             this.btnclear.TabIndex = 5;
-            this.btnclear.Text = "Clear";
+            this.btnclear.Text = "Temizle";
             this.btnclear.UseVisualStyleBackColor = true;
             this.btnclear.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -150,57 +133,60 @@
             // 
             this.btnresetpass.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnresetpass.FlatAppearance.BorderSize = 2;
-            this.btnresetpass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.btnresetpass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnresetpass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnresetpass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnresetpass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnresetpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnresetpass.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnresetpass.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnresetpass.Location = new System.Drawing.Point(72, 170);
+            this.btnresetpass.ForeColor = System.Drawing.Color.White;
+            this.btnresetpass.Location = new System.Drawing.Point(22, 145);
             this.btnresetpass.Name = "btnresetpass";
-            this.btnresetpass.Size = new System.Drawing.Size(221, 31);
+            this.btnresetpass.Size = new System.Drawing.Size(295, 44);
             this.btnresetpass.TabIndex = 4;
-            this.btnresetpass.Text = "Reset Password";
+            this.btnresetpass.Text = "Sifreyi Kaydet";
             this.btnresetpass.UseVisualStyleBackColor = true;
             this.btnresetpass.Click += new System.EventHandler(this.button3_Click);
             // 
             // txtconfirmpass
             // 
             this.txtconfirmpass.Location = new System.Drawing.Point(165, 96);
+            this.txtconfirmpass.Multiline = true;
             this.txtconfirmpass.Name = "txtconfirmpass";
-            this.txtconfirmpass.Size = new System.Drawing.Size(128, 22);
+            this.txtconfirmpass.Size = new System.Drawing.Size(152, 22);
             this.txtconfirmpass.TabIndex = 3;
             // 
             // txtnewpass
             // 
             this.txtnewpass.Location = new System.Drawing.Point(165, 60);
+            this.txtnewpass.Multiline = true;
             this.txtnewpass.Name = "txtnewpass";
-            this.txtnewpass.Size = new System.Drawing.Size(128, 22);
+            this.txtnewpass.Size = new System.Drawing.Size(152, 22);
             this.txtnewpass.TabIndex = 2;
             // 
             // lblconfirmpass
             // 
             this.lblconfirmpass.AutoSize = true;
             this.lblconfirmpass.Font = new System.Drawing.Font("Sitka Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblconfirmpass.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblconfirmpass.Location = new System.Drawing.Point(10, 96);
+            this.lblconfirmpass.ForeColor = System.Drawing.Color.White;
+            this.lblconfirmpass.Location = new System.Drawing.Point(18, 96);
             this.lblconfirmpass.Name = "lblconfirmpass";
-            this.lblconfirmpass.Size = new System.Drawing.Size(149, 21);
+            this.lblconfirmpass.Size = new System.Drawing.Size(126, 21);
             this.lblconfirmpass.TabIndex = 1;
-            this.lblconfirmpass.Text = "Confirm Password :";
+            this.lblconfirmpass.Text = "Sifreyi Dogrula :";
             // 
             // lblnewpass
             // 
             this.lblnewpass.AutoSize = true;
             this.lblnewpass.Font = new System.Drawing.Font("Sitka Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnewpass.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblnewpass.Location = new System.Drawing.Point(36, 61);
+            this.lblnewpass.ForeColor = System.Drawing.Color.White;
+            this.lblnewpass.Location = new System.Drawing.Point(57, 61);
             this.lblnewpass.Name = "lblnewpass";
-            this.lblnewpass.Size = new System.Drawing.Size(123, 21);
+            this.lblnewpass.Size = new System.Drawing.Size(87, 21);
             this.lblnewpass.TabIndex = 0;
-            this.lblnewpass.Text = "New Password :";
+            this.lblnewpass.Text = "Yeni Sifre :";
             // 
             // panelchangepass
             // 
+            this.panelchangepass.BackColor = System.Drawing.Color.Transparent;
             this.panelchangepass.Controls.Add(this.groupBox2);
             this.panelchangepass.Location = new System.Drawing.Point(165, 86);
             this.panelchangepass.Name = "panelchangepass";
@@ -209,6 +195,7 @@
             // 
             // panelbooks
             // 
+            this.panelbooks.BackColor = System.Drawing.Color.Transparent;
             this.panelbooks.Controls.Add(this.btnresfresh);
             this.panelbooks.Controls.Add(this.booksdata);
             this.panelbooks.Controls.Add(this.lbltakenbooks);
@@ -219,12 +206,17 @@
             // 
             // btnresfresh
             // 
-            this.btnresfresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnresfresh.Location = new System.Drawing.Point(359, 278);
+            this.btnresfresh.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnresfresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnresfresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnresfresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnresfresh.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnresfresh.ForeColor = System.Drawing.Color.White;
+            this.btnresfresh.Location = new System.Drawing.Point(328, 278);
             this.btnresfresh.Name = "btnresfresh";
-            this.btnresfresh.Size = new System.Drawing.Size(75, 23);
+            this.btnresfresh.Size = new System.Drawing.Size(106, 27);
             this.btnresfresh.TabIndex = 6;
-            this.btnresfresh.Text = "REFRESH";
+            this.btnresfresh.Text = "Yenile";
             this.btnresfresh.UseVisualStyleBackColor = true;
             // 
             // booksdata
@@ -238,16 +230,17 @@
             // lbltakenbooks
             // 
             this.lbltakenbooks.AutoSize = true;
-            this.lbltakenbooks.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbltakenbooks.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbltakenbooks.Location = new System.Drawing.Point(9, 63);
+            this.lbltakenbooks.Font = new System.Drawing.Font("Sitka Small", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbltakenbooks.ForeColor = System.Drawing.Color.White;
+            this.lbltakenbooks.Location = new System.Drawing.Point(3, 59);
             this.lbltakenbooks.Name = "lbltakenbooks";
-            this.lbltakenbooks.Size = new System.Drawing.Size(222, 22);
+            this.lbltakenbooks.Size = new System.Drawing.Size(271, 28);
             this.lbltakenbooks.TabIndex = 1;
-            this.lbltakenbooks.Text = "The Books Which Have Taken :";
+            this.lbltakenbooks.Text = "Sahip Oldugunuz Kitaplar :";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
@@ -262,54 +255,49 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changePasswordToolStripMenuItem,
             this.borrowedBooksToolStripMenuItem,
+            this.toolStripMenuItem2,
             this.signOutToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.fileToolStripMenuItem.Text = "Dosya";
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.changePasswordToolStripMenuItem.Text = "CHANGE PASSWORD";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.changePasswordToolStripMenuItem.Text = "Sifre Degis";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // borrowedBooksToolStripMenuItem
             // 
             this.borrowedBooksToolStripMenuItem.Name = "borrowedBooksToolStripMenuItem";
-            this.borrowedBooksToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.borrowedBooksToolStripMenuItem.Text = "BORROWED BOOKS";
+            this.borrowedBooksToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.borrowedBooksToolStripMenuItem.Text = "Sahip Olunan Kitaplar";
             this.borrowedBooksToolStripMenuItem.Click += new System.EventHandler(this.borrowedBooksToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(185, 6);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.signOutToolStripMenuItem.Text = "SIGN OUT";
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.signOutToolStripMenuItem.Text = "Oturumu Kapat";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.helpToolStripMenuItem.Text = "Yardim";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(640, 502);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 37);
             this.label1.Name = "label1";
@@ -320,7 +308,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(12, 59);
             this.label2.Name = "label2";
@@ -332,15 +320,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(640, 502);
+            this.Controls.Add(this.btnkitaplariniz);
+            this.Controls.Add(this.btnsifredegis);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panelchangepass);
             this.Controls.Add(this.panelbooks);
-            this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
@@ -348,8 +340,8 @@
             this.Name = "user";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C&U LIBRARY";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.user_FormClosing);
             this.Load += new System.EventHandler(this.user_Load);
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panelchangepass.ResumeLayout(false);
@@ -358,7 +350,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.booksdata)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,9 +357,8 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnborrowedbooks;
-        private System.Windows.Forms.Button btnchangepass;
+        private System.Windows.Forms.Button btnkitaplariniz;
+        private System.Windows.Forms.Button btnsifredegis;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btnresetpass;
@@ -385,10 +375,10 @@
         private System.Windows.Forms.ToolStripMenuItem borrowedBooksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView booksdata;
         private System.Windows.Forms.Button btnresfresh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
     }
 }

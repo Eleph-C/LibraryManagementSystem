@@ -87,15 +87,17 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(342, 252);
+            this.tabPage1.Size = new System.Drawing.Size(359, 260);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
             // btnadminlog
             // 
-            this.btnadminlog.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnadminlog.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnadminlog.Location = new System.Drawing.Point(172, 178);
+            this.btnadminlog.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnadminlog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnadminlog.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnadminlog.ForeColor = System.Drawing.Color.White;
+            this.btnadminlog.Location = new System.Drawing.Point(182, 143);
             this.btnadminlog.Name = "btnadminlog";
             this.btnadminlog.Size = new System.Drawing.Size(159, 41);
             this.btnadminlog.TabIndex = 35;
@@ -105,9 +107,11 @@
             // 
             // btncanceladmin
             // 
-            this.btncanceladmin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btncanceladmin.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btncanceladmin.Location = new System.Drawing.Point(7, 178);
+            this.btncanceladmin.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btncanceladmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncanceladmin.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btncanceladmin.ForeColor = System.Drawing.Color.White;
+            this.btncanceladmin.Location = new System.Drawing.Point(17, 143);
             this.btncanceladmin.Name = "btncanceladmin";
             this.btncanceladmin.Size = new System.Drawing.Size(159, 41);
             this.btncanceladmin.TabIndex = 34;
@@ -118,7 +122,7 @@
             // linkLabellost2
             // 
             this.linkLabellost2.AutoSize = true;
-            this.linkLabellost2.Location = new System.Drawing.Point(56, 144);
+            this.linkLabellost2.Location = new System.Drawing.Point(50, 120);
             this.linkLabellost2.Name = "linkLabellost2";
             this.linkLabellost2.Size = new System.Drawing.Size(99, 13);
             this.linkLabellost2.TabIndex = 31;
@@ -128,46 +132,51 @@
             // 
             // txtyoneticisifre
             // 
-            this.txtyoneticisifre.Location = new System.Drawing.Point(151, 103);
+            this.txtyoneticisifre.Location = new System.Drawing.Point(118, 85);
+            this.txtyoneticisifre.Multiline = true;
             this.txtyoneticisifre.Name = "txtyoneticisifre";
-            this.txtyoneticisifre.Size = new System.Drawing.Size(139, 20);
+            this.txtyoneticisifre.Size = new System.Drawing.Size(193, 23);
             this.txtyoneticisifre.TabIndex = 33;
             this.txtyoneticisifre.UseSystemPasswordChar = true;
             // 
             // txtyoneticiemail
             // 
-            this.txtyoneticiemail.Location = new System.Drawing.Point(151, 66);
+            this.txtyoneticiemail.Location = new System.Drawing.Point(118, 48);
+            this.txtyoneticiemail.Multiline = true;
             this.txtyoneticiemail.Name = "txtyoneticiemail";
-            this.txtyoneticiemail.Size = new System.Drawing.Size(139, 20);
+            this.txtyoneticiemail.Size = new System.Drawing.Size(193, 23);
             this.txtyoneticiemail.TabIndex = 32;
             // 
             // lbladminpass
             // 
             this.lbladminpass.AutoSize = true;
-            this.lbladminpass.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbladminpass.Location = new System.Drawing.Point(82, 101);
+            this.lbladminpass.Font = new System.Drawing.Font("Sitka Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbladminpass.ForeColor = System.Drawing.Color.White;
+            this.lbladminpass.Location = new System.Drawing.Point(49, 83);
             this.lbladminpass.Name = "lbladminpass";
-            this.lbladminpass.Size = new System.Drawing.Size(65, 23);
+            this.lbladminpass.Size = new System.Drawing.Size(57, 21);
             this.lbladminpass.TabIndex = 30;
             this.lbladminpass.Text = "Sifre : ";
             // 
             // lbladminname
             // 
             this.lbladminname.AutoSize = true;
-            this.lbladminname.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbladminname.Location = new System.Drawing.Point(82, 63);
+            this.lbladminname.Font = new System.Drawing.Font("Sitka Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbladminname.ForeColor = System.Drawing.Color.White;
+            this.lbladminname.Location = new System.Drawing.Point(49, 45);
             this.lbladminname.Name = "lbladminname";
-            this.lbladminname.Size = new System.Drawing.Size(64, 23);
+            this.lbladminname.Size = new System.Drawing.Size(63, 21);
             this.lbladminname.TabIndex = 29;
             this.lbladminname.Text = "Email : ";
             // 
             // lbladmin
             // 
             this.lbladmin.AutoSize = true;
-            this.lbladmin.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbladmin.Location = new System.Drawing.Point(7, 23);
+            this.lbladmin.Font = new System.Drawing.Font("Sitka Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbladmin.ForeColor = System.Drawing.Color.White;
+            this.lbladmin.Location = new System.Drawing.Point(28, 5);
             this.lbladmin.Name = "lbladmin";
-            this.lbladmin.Size = new System.Drawing.Size(129, 26);
+            this.lbladmin.Size = new System.Drawing.Size(138, 28);
             this.lbladmin.TabIndex = 28;
             this.lbladmin.Text = "Yonetici Girisi";
             // 
@@ -181,17 +190,19 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(342, 252);
+            this.tabPage2.Size = new System.Drawing.Size(359, 260);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
             // btncanceladmin2
             // 
-            this.btncanceladmin2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btncanceladmin2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btncanceladmin2.Location = new System.Drawing.Point(25, 132);
+            this.btncanceladmin2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btncanceladmin2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncanceladmin2.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btncanceladmin2.ForeColor = System.Drawing.Color.White;
+            this.btncanceladmin2.Location = new System.Drawing.Point(17, 80);
             this.btncanceladmin2.Name = "btncanceladmin2";
-            this.btncanceladmin2.Size = new System.Drawing.Size(127, 55);
+            this.btncanceladmin2.Size = new System.Drawing.Size(86, 43);
             this.btncanceladmin2.TabIndex = 15;
             this.btncanceladmin2.Text = "Iptal";
             this.btncanceladmin2.UseVisualStyleBackColor = true;
@@ -199,11 +210,13 @@
             // 
             // btnadminsendcod
             // 
-            this.btnadminsendcod.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnadminsendcod.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnadminsendcod.Location = new System.Drawing.Point(158, 132);
+            this.btnadminsendcod.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnadminsendcod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnadminsendcod.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnadminsendcod.ForeColor = System.Drawing.Color.White;
+            this.btnadminsendcod.Location = new System.Drawing.Point(109, 80);
             this.btnadminsendcod.Name = "btnadminsendcod";
-            this.btnadminsendcod.Size = new System.Drawing.Size(178, 55);
+            this.btnadminsendcod.Size = new System.Drawing.Size(219, 43);
             this.btnadminsendcod.TabIndex = 14;
             this.btnadminsendcod.Text = "Guvenlik Kodunu Gonder";
             this.btnadminsendcod.UseVisualStyleBackColor = true;
@@ -211,16 +224,18 @@
             // 
             // txtadminemail
             // 
-            this.txtadminemail.Location = new System.Drawing.Point(123, 98);
+            this.txtadminemail.Location = new System.Drawing.Point(115, 46);
+            this.txtadminemail.Multiline = true;
             this.txtadminemail.Name = "txtadminemail";
-            this.txtadminemail.Size = new System.Drawing.Size(194, 20);
+            this.txtadminemail.Size = new System.Drawing.Size(213, 23);
             this.txtadminemail.TabIndex = 13;
             // 
             // lbladminemail
             // 
             this.lbladminemail.AutoSize = true;
             this.lbladminemail.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.lbladminemail.Location = new System.Drawing.Point(59, 96);
+            this.lbladminemail.ForeColor = System.Drawing.Color.White;
+            this.lbladminemail.Location = new System.Drawing.Point(51, 44);
             this.lbladminemail.Name = "lbladminemail";
             this.lbladminemail.Size = new System.Drawing.Size(64, 23);
             this.lbladminemail.TabIndex = 12;
@@ -235,17 +250,19 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(342, 252);
+            this.tabPage3.Size = new System.Drawing.Size(359, 260);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
             // btnadmincod
             // 
-            this.btnadmincod.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnadmincod.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnadmincod.Location = new System.Drawing.Point(101, 160);
+            this.btnadmincod.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnadmincod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnadmincod.Font = new System.Drawing.Font("Sitka Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnadmincod.ForeColor = System.Drawing.Color.White;
+            this.btnadmincod.Location = new System.Drawing.Point(79, 99);
             this.btnadmincod.Name = "btnadmincod";
-            this.btnadmincod.Size = new System.Drawing.Size(159, 41);
+            this.btnadmincod.Size = new System.Drawing.Size(218, 46);
             this.btnadmincod.TabIndex = 11;
             this.btnadmincod.Text = "Devam";
             this.btnadmincod.UseVisualStyleBackColor = true;
@@ -253,20 +270,20 @@
             // 
             // txtadmincod
             // 
-            this.txtadmincod.Location = new System.Drawing.Point(101, 118);
+            this.txtadmincod.Location = new System.Drawing.Point(118, 73);
             this.txtadmincod.Name = "txtadmincod";
-            this.txtadmincod.Size = new System.Drawing.Size(159, 20);
+            this.txtadmincod.Size = new System.Drawing.Size(128, 20);
             this.txtadmincod.TabIndex = 10;
             this.txtadmincod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblcodsended2
             // 
             this.lblcodsended2.AutoSize = true;
-            this.lblcodsended2.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.lblcodsended2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblcodsended2.Location = new System.Drawing.Point(7, 70);
+            this.lblcodsended2.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblcodsended2.ForeColor = System.Drawing.Color.White;
+            this.lblcodsended2.Location = new System.Drawing.Point(4, 25);
             this.lblcodsended2.Name = "lblcodsended2";
-            this.lblcodsended2.Size = new System.Drawing.Size(325, 23);
+            this.lblcodsended2.Size = new System.Drawing.Size(342, 23);
             this.lblcodsended2.TabIndex = 9;
             this.lblcodsended2.Text = "Emailine gonderilen kodu asagidaki yere gir";
             // 
@@ -288,18 +305,21 @@
             // lbladminnewpassword
             // 
             this.lbladminnewpassword.AutoSize = true;
-            this.lbladminnewpassword.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.lbladminnewpassword.Location = new System.Drawing.Point(81, 64);
+            this.lbladminnewpassword.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbladminnewpassword.ForeColor = System.Drawing.Color.White;
+            this.lbladminnewpassword.Location = new System.Drawing.Point(53, 23);
             this.lbladminnewpassword.Name = "lbladminnewpassword";
-            this.lbladminnewpassword.Size = new System.Drawing.Size(102, 23);
+            this.lbladminnewpassword.Size = new System.Drawing.Size(98, 23);
             this.lbladminnewpassword.TabIndex = 29;
             this.lbladminnewpassword.Text = "Yeni Sifre : ";
             // 
             // btnadminsavepass
             // 
-            this.btnadminsavepass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnadminsavepass.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnadminsavepass.Location = new System.Drawing.Point(12, 158);
+            this.btnadminsavepass.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnadminsavepass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnadminsavepass.Font = new System.Drawing.Font("Sitka Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnadminsavepass.ForeColor = System.Drawing.Color.White;
+            this.btnadminsavepass.Location = new System.Drawing.Point(18, 117);
             this.btnadminsavepass.Name = "btnadminsavepass";
             this.btnadminsavepass.Size = new System.Drawing.Size(320, 41);
             this.btnadminsavepass.TabIndex = 33;
@@ -309,32 +329,35 @@
             // 
             // txtadminnewpass
             // 
-            this.txtadminnewpass.Location = new System.Drawing.Point(186, 67);
+            this.txtadminnewpass.Location = new System.Drawing.Point(149, 24);
+            this.txtadminnewpass.Multiline = true;
             this.txtadminnewpass.Name = "txtadminnewpass";
-            this.txtadminnewpass.Size = new System.Drawing.Size(146, 20);
+            this.txtadminnewpass.Size = new System.Drawing.Size(171, 23);
             this.txtadminnewpass.TabIndex = 31;
             // 
             // txtadminconfirmpass
             // 
-            this.txtadminconfirmpass.Location = new System.Drawing.Point(186, 112);
+            this.txtadminconfirmpass.Location = new System.Drawing.Point(149, 69);
+            this.txtadminconfirmpass.Multiline = true;
             this.txtadminconfirmpass.Name = "txtadminconfirmpass";
-            this.txtadminconfirmpass.Size = new System.Drawing.Size(146, 20);
+            this.txtadminconfirmpass.Size = new System.Drawing.Size(171, 23);
             this.txtadminconfirmpass.TabIndex = 32;
             // 
             // lbladminconfirmpass
             // 
             this.lbladminconfirmpass.AutoSize = true;
-            this.lbladminconfirmpass.Font = new System.Drawing.Font("Comic Sans MS", 12F);
-            this.lbladminconfirmpass.Location = new System.Drawing.Point(8, 110);
+            this.lbladminconfirmpass.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbladminconfirmpass.ForeColor = System.Drawing.Color.White;
+            this.lbladminconfirmpass.Location = new System.Drawing.Point(14, 69);
             this.lbladminconfirmpass.Name = "lbladminconfirmpass";
-            this.lbladminconfirmpass.Size = new System.Drawing.Size(178, 23);
+            this.lbladminconfirmpass.Size = new System.Drawing.Size(140, 23);
             this.lbladminconfirmpass.TabIndex = 30;
-            this.lbladminconfirmpass.Text = "Yeni Sifreyi Dogrula : ";
+            this.lbladminconfirmpass.Text = "Sifreyi Dogrula : ";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 23);
             this.panel1.TabIndex = 34;
@@ -343,12 +366,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 281);
+            this.ClientSize = new System.Drawing.Size(349, 223);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Name = "AdminGirisFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminGirisFormu";
+            this.Text = "Admin Giris Formu";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

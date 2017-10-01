@@ -17,12 +17,7 @@ namespace end
         {
             InitializeComponent();
         }
-        Uye uye = new Uye();
-        private void UyeGirisFormu_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        Uye uye;
         private void btnuserlog_Click(object sender, EventArgs e)
         {
             uye = new Uye();
@@ -39,14 +34,12 @@ namespace end
                 MessageBox.Show("Kullanici adi veya Sifre hatali");
             }
         }
-
         private void btnusercancel_Click(object sender, EventArgs e)
         {
             login login = new login();
             login.Show();
             this.Close();
         }
-
         private void linkLabellost_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             tabControl1.SelectTab(1);
@@ -62,11 +55,11 @@ namespace end
         string a = GetRandomString();
         private void btnusersendcode_Click(object sender, EventArgs e)
         {
-            if (txtuseremail.Text == "")
+            if (txtuseremail.Text == string.Empty)
             {
-                MessageBox.Show("Give True Values !");
+                MessageBox.Show("Dogru Karakterle Girilmedi !");
             }
-            if (txtuseremail.Text != "")
+            if (txtuseremail.Text != string.Empty)
             {
                 try
                 {
@@ -83,29 +76,26 @@ namespace end
                     server.Send(message);
                     tabControl1.SelectTab(2);
                 }
-                catch
+                catch(Exception ex)
                 {
-                    MessageBox.Show("Give True Values !");
+                    MessageBox.Show(ex.Message.ToString());
                 }
             }
         }
-
         private void btncanceluser2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(0);
         }
-
         private void btnusercode_Click(object sender, EventArgs e)
         {
             if (txtcodeuser.Text == a) tabControl1.SelectTab(3);
-            else MessageBox.Show("Wrong code try again");  
+            else MessageBox.Show("Yanlis Kod Tekrar Deneyin");  
         }
-
         private void btnusersavepass_Click(object sender, EventArgs e)
         {
             if (txtnewpassworduser.Text.Length < 6)
             {
-                MessageBox.Show("6 dan kucuk deger");
+                MessageBox.Show("Girilen Sifre En Az 6 Karakter Icermeli");
             }
             else if (txtnewpassworduser.Text.Length > 6 || txtconfrmpassuser.Text == txtnewpassworduser.Text)
             {
@@ -117,7 +107,6 @@ namespace end
                     MessageBox.Show("Bilgileriniz Kaydedildi");
                 }
                 //Veritabani.UyeSifreYenile(txtnewpassworduser.Text, txtuseremail.Text);
-
                 tabControl1.SelectTab(0);
             }
             else
@@ -125,6 +114,5 @@ namespace end
                 MessageBox.Show("Dogru Degerler Girilmedi");
             }
         }
-
     }
 }

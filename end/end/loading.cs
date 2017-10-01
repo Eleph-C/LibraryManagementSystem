@@ -19,15 +19,24 @@ namespace end
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            loadingline.Increment(7);
-           // loadingline.Step = 10;
+           
             if(loadingline.Value ==100)
             {
                 timer1.Stop();
+                login login = new login();
+                login.Show();
+                this.Hide();
                 
-                this.Close();
-               
             }
+            else
+            {
+                loadingline.Value = loadingline.Value + 10;
+            }
+        }
+
+        private void loading_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }

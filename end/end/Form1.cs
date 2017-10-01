@@ -115,7 +115,7 @@ namespace end
             
             if (txtbooknumber.Text != string.Empty)
             {
-                DialogResult result = MessageBox.Show("Do You Want To Delete ?", "Information", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Silmek istiyor musun ?", "Uyari", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     int kitapnumarasi = Convert.ToInt32(txtbooknumber.Text);
@@ -216,22 +216,26 @@ namespace end
 
         private void editbtn1_Click(object sender, EventArgs e)
         {
-            kitap = new Kitap();
-            kitap.KitapNumarasi = Convert.ToInt32(txtbooknumber.Text);
-            kitap.KitapAdi = txtbookname.Text;
-            kitap.KitapYazari = txtbookauthor.Text;
-            kitap.KitapSayfaSayisi = Convert.ToInt32(txtbookpage.Text);
-            kitap.KitapKategori = combobookcategory.Text;
-            kitap.KitapYayincisi = txtbookpublisher.Text;
-            kitap.KitapTercumani = txtbooktranslated.Text;
-            kitap.KitapYayinlanmaTarihi = Convert.ToInt32(txtbookdate.Text);
-            if (kitap.KutuphanedekiKitabiDuzenle())
+            try
             {
-                MessageBox.Show("Kitap Duzeltildi");
+                kitap = new Kitap();
+                kitap.KitapNumarasi = Convert.ToInt32(txtbooknumber.Text);
+                kitap.KitapAdi = txtbookname.Text;
+                kitap.KitapYazari = txtbookauthor.Text;
+                kitap.KitapSayfaSayisi = Convert.ToInt32(txtbookpage.Text);
+                kitap.KitapKategori = combobookcategory.Text;
+                kitap.KitapYayincisi = txtbookpublisher.Text;
+                kitap.KitapTercumani = txtbooktranslated.Text;
+                kitap.KitapYayinlanmaTarihi = Convert.ToInt32(txtbookdate.Text);
+                if (kitap.KutuphanedekiKitabiDuzenle())
+                {
+                    MessageBox.Show("Kitap Duzeltildi");
+                }
+                //Veritabani.KitapDuzenle(Convert.ToInt32(txtbooknumber.Text), txtbookname.Text, txtbookauthor.Text, Convert.ToInt32(txtbookpage.Text), combobookcategory.Text, txtbookpublisher.Text, txtbooktranslated.Text, Convert.ToInt32(txtbookdate.Text));
+                showdatakitap();
+                KitapNumarasiDolumuBosmu();
             }
-            //Veritabani.KitapDuzenle(Convert.ToInt32(txtbooknumber.Text), txtbookname.Text, txtbookauthor.Text, Convert.ToInt32(txtbookpage.Text), combobookcategory.Text, txtbookpublisher.Text, txtbooktranslated.Text, Convert.ToInt32(txtbookdate.Text));
-            showdatakitap();
-            KitapNumarasiDolumuBosmu();
+            catch { }
         }
         private void KitapNumarasiDolumuBosmu()
         {
@@ -432,25 +436,30 @@ namespace end
 
         private void btndelete_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Silmek Istiyor musunuz ?","Uyari",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-
-            if (result == DialogResult.Yes)
+            try
             {
-                int uyekimlik = Convert.ToInt32(txtmembertc.Text);
-                uye = new Uye();
-                uye.Uyekimlik = uyekimlik;
-                if (uye.KutuphanedenUyeSil())
+                DialogResult result = MessageBox.Show("Silmek Istiyor musunuz ?", "Uyari", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Uye Silindi");
+                    int uyekimlik = Convert.ToInt32(txtmembertc.Text);
+                    uye = new Uye();
+                    uye.Uyekimlik = uyekimlik;
+                    if (uye.KutuphanedenUyeSil())
+                    {
+                        MessageBox.Show("Uye Silindi");
+                    }
+                    //Veritabani.UyeSil(uyekimlik);
+                    txtmembername.Clear();
+                    txtmemberemail.Clear();
+                    txtmemberphone.Clear();
+                    txtmembertc.Clear();
+                    txtmemberpass.Clear();
+                    showdatamember();
                 }
-                //Veritabani.UyeSil(uyekimlik);
-                txtmembername.Clear();
-                txtmemberemail.Clear();
-                txtmemberphone.Clear();
-                txtmembertc.Clear();
-                txtmemberpass.Clear();
-                showdatamember();
             }
+
+            catch { }
            
         }
         private int GunFarki()
@@ -500,7 +509,7 @@ namespace end
 
         private void adminsignupbtn_Click(object sender, EventArgs e)
         {
-            if (txtadminname.Text != "")
+            if (txtadmintc.Text != "")
             {
                 yonetici = new Yonetici();
                 yonetici.Adminkimlik = Convert.ToInt32(txtadmintc.Text);
@@ -527,42 +536,50 @@ namespace end
 
         private void btnupdate2_Click(object sender, EventArgs e)
         {
-            yonetici = new Yonetici();
-            yonetici.Adminkimlik = Convert.ToInt32(txtadmintc.Text);
-            yonetici.Adminadi = txtadminname.Text;
-            yonetici.Adminemail = txtadminemail.Text;
-            yonetici.Admintelefon = Convert.ToInt32(txtadminphone.Text);
-            yonetici.Adminsifre = txtadminpassword.Text;
-            yonetici.Adminlikdurumu = jobs.Text;
-            if (yonetici.KutuphaneAdminiDuzenle())
+            try
             {
-                MessageBox.Show("Yonetici Duzenlendi");
+                yonetici = new Yonetici();
+                yonetici.Adminkimlik = Convert.ToInt32(txtadmintc.Text);
+                yonetici.Adminadi = txtadminname.Text;
+                yonetici.Adminemail = txtadminemail.Text;
+                yonetici.Admintelefon = Convert.ToInt32(txtadminphone.Text);
+                yonetici.Adminsifre = txtadminpassword.Text;
+                yonetici.Adminlikdurumu = jobs.Text;
+                if (yonetici.KutuphaneAdminiDuzenle())
+                {
+                    MessageBox.Show("Yonetici Duzenlendi");
+                }
+                //Veritabani.AdminDuzenle(Convert.ToInt32(txtadmintc.Text),txtadminname.Text,txtadminemail.Text,Convert.ToInt32(txtadminphone.Text),txtadminpassword.Text,jobs.Text);
+                showdataadmin();
             }
-            //Veritabani.AdminDuzenle(Convert.ToInt32(txtadmintc.Text),txtadminname.Text,txtadminemail.Text,Convert.ToInt32(txtadminphone.Text),txtadminpassword.Text,jobs.Text);
-            showdataadmin();
+            catch { }
         }
 
         private void btndelete2_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Silmek Istiyor musunuz ?", "Uyari", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (result == DialogResult.Yes)
+            try
             {
-                yonetici = new Yonetici();
-                yonetici.Adminkimlik = Convert.ToInt32(txtadmintc.Text);
-                if (yonetici.KutuphaneAdminiSil())
+                DialogResult result = MessageBox.Show("Silmek Istiyor musunuz ?", "Uyari", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Yonetici Kutuphaneden Silindi");
+                    yonetici = new Yonetici();
+                    yonetici.Adminkimlik = Convert.ToInt32(txtadmintc.Text);
+                    if (yonetici.KutuphaneAdminiSil())
+                    {
+                        MessageBox.Show("Yonetici Kutuphaneden Silindi");
+                    }
+                    //Veritabani.AdminSil(Convert.ToInt32(txtadmintc.Text));
+                    txtadminname.Clear();
+                    txtadminemail.Clear();
+                    txtadminphone.Clear();
+                    txtadmintc.Clear();
+                    txtadminpassword.Clear();
+                    jobs.Text = "";
+                    showdataadmin();
                 }
-                //Veritabani.AdminSil(Convert.ToInt32(txtadmintc.Text));
-                txtadminname.Clear();
-                txtadminemail.Clear();
-                txtadminphone.Clear();
-                txtadmintc.Clear();
-                txtadminpassword.Clear();
-                jobs.Text = "";
-                showdataadmin();
             }
+            catch { }
            
         }
 
@@ -635,7 +652,7 @@ namespace end
 
         private void comboitems_SelectedIndexChanged(object sender, EventArgs e)
         {
-            searchlbl.Text="Ara "+comboitems.Text;
+            searchlbl.Text=comboitems.Text + " Araniyor ";
         }
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
@@ -653,12 +670,32 @@ namespace end
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            checkbooknamelbl.Text = "Ara " + comboBox1.Text+" :";
+            checkbooknamelbl.Text =comboBox1.Text + " Araniyor ";
+        }
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0)
+            {
+                comboitems.Text = comboitems.Items[1].ToString();//COMBOBOX HATA VERIR KOYULMAZSA
+                showdatakitap();
+            }
+            else if (tabControl1.SelectedIndex == 1)
+            {
+                showdatamember();
+            }
+            else if (tabControl1.SelectedIndex == 2)
+            {
+                comboBox1.Text = comboBox1.Items[1].ToString();//COMBOBOX HATA VERIR KOYULMAZSA
+                showdatakitap();
+            }
+            else if (tabControl1.SelectedIndex == 3)
+            {
+                paneladmin.Hide();
+                panelwarning.Show(); 
+            }
         }
 
-       
-
-        private void button1_Click(object sender, EventArgs e)
+        private void txtcheckbookname_TextChanged(object sender, EventArgs e)
         {
             string a = txtcheckbookname.Text;
             a.ToLower();
@@ -683,27 +720,9 @@ namespace end
                 MessageBox.Show("Bir seyler yanlis gitti", "Uyari!");
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (tabControl1.SelectedIndex == 0)
-            {
-                comboitems.Text = comboitems.Items[1].ToString();//COMBOBOX HATA VERIR KOYULMAZSA
-                showdatakitap();
-            }
-            else if (tabControl1.SelectedIndex == 1)
-            {
-                showdatamember();
-            }
-            else if (tabControl1.SelectedIndex == 2)
-            {
-                comboBox1.Text = comboBox1.Items[1].ToString();//COMBOBOX HATA VERIR KOYULMAZSA
-                showdatakitap();
-            }
-            else if (tabControl1.SelectedIndex == 3)
-            {
-                paneladmin.Hide();
-                panelwarning.Show(); 
-            }
+            Application.Exit();
         }
   
     }

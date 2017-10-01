@@ -28,11 +28,11 @@ namespace end
         string a = GetRandomString();
         private void btnadminsendcod_Click(object sender, EventArgs e)
         {
-            if (txtadminemail.Text == "")
+            if (txtadminemail.Text == string.Empty)
             {
-                MessageBox.Show("Give True Values !");
+                MessageBox.Show("Dogru Karakterle Girilmedi !");
             }
-            if (txtadminemail.Text != "")
+            if (txtadminemail.Text != string.Empty)
             {
                 try
                 {
@@ -49,29 +49,27 @@ namespace end
                     server.Send(message);
                     tabControl1.SelectTab(2);
                 }
-                catch
+                catch(Exception ex)
                 {
-                    MessageBox.Show("Give True Values !");
+                    MessageBox.Show(ex.Message.ToString());
                 }
             }
         }
-
         private void btncanceladmin2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(0);
         }
-
         private void btnadmincod_Click(object sender, EventArgs e)
         {
             if (txtadmincod.Text == a) tabControl1.SelectTab(3);
             else MessageBox.Show("Yanlis kod tekrar deneyin");
         }
-        Yonetici yonetici = new Yonetici();
+        Yonetici yonetici;
         private void btnadminsavepass_Click(object sender, EventArgs e)
         {
             if (txtadminnewpass.Text.Length < 6)
             {
-                MessageBox.Show("6 dan kucuk");
+                MessageBox.Show("Girilen Sifre En Az 6 Karakter Icermeli");
             }
             else if (txtadminnewpass.Text.Length > 6 || txtadminconfirmpass.Text == txtadminnewpass.Text)
             {
@@ -87,10 +85,9 @@ namespace end
             }
             else
             {
-                MessageBox.Show("Give True Valid");
+                MessageBox.Show("Dogru Degerler Girilmedi");
             }
         }
-
         private void btnadminlog_Click(object sender, EventArgs e)
         {
             yonetici = new Yonetici();
@@ -102,21 +99,17 @@ namespace end
                 form1.Show();
                 this.Hide();
             }
-            else { MessageBox.Show("Kullanici adi veya Sifre hatali"); }
-            
+            else { MessageBox.Show("Kullanici adi veya Sifre hatali"); }            
         }
-
         private void btncanceladmin_Click(object sender, EventArgs e)
         {
             login login = new login();
             login.Show();
             this.Close();
         }
-
         private void linkLabellost2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             tabControl1.SelectTab(1);
         }
-
     }
 }

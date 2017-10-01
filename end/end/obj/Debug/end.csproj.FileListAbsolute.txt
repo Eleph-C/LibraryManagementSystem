@@ -71,3 +71,4 @@ D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.user.resources
 D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.csproj.GenerateResource.Cache
 D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.AdminGirisFormu.resources
 D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.UyeGirisFormu.resources
+D:\CAN-DOSYALAR\git\end\end\obj\Debug\end.KutuphaneKurallari.resources
