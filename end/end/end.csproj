@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminGirisFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminGirisFormu.Designer.cs">
+      <DependentUpon>AdminGirisFormu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,8 +100,17 @@
       <DependentUpon>user.cs</DependentUpon>
     </Compile>
     <Compile Include="Uye.cs" />
+    <Compile Include="UyeGirisFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UyeGirisFormu.Designer.cs">
+      <DependentUpon>UyeGirisFormu.cs</DependentUpon>
+    </Compile>
     <Compile Include="veritabani.cs" />
     <Compile Include="Yonetici.cs" />
+    <EmbeddedResource Include="AdminGirisFormu.resx">
+      <DependentUpon>AdminGirisFormu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +135,9 @@
     </Compile>
     <EmbeddedResource Include="user.resx">
       <DependentUpon>user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UyeGirisFormu.resx">
+      <DependentUpon>UyeGirisFormu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

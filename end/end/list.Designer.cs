@@ -58,23 +58,25 @@
             this.booksdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.booksdata.Location = new System.Drawing.Point(1, 0);
             this.booksdata.Name = "booksdata";
-            this.booksdata.Size = new System.Drawing.Size(864, 403);
+            this.booksdata.Size = new System.Drawing.Size(864, 299);
             this.booksdata.TabIndex = 4;
             // 
             // btnrefresh
             // 
+            this.btnrefresh.BackColor = System.Drawing.Color.Transparent;
             this.btnrefresh.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnrefresh.FlatAppearance.BorderSize = 2;
             this.btnrefresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.btnrefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnrefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnrefresh.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnrefresh.Location = new System.Drawing.Point(778, 412);
+            this.btnrefresh.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnrefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnrefresh.Location = new System.Drawing.Point(765, 360);
             this.btnrefresh.Name = "btnrefresh";
-            this.btnrefresh.Size = new System.Drawing.Size(87, 31);
+            this.btnrefresh.Size = new System.Drawing.Size(100, 37);
             this.btnrefresh.TabIndex = 3;
             this.btnrefresh.Text = "REFRESH";
-            this.btnrefresh.UseVisualStyleBackColor = true;
+            this.btnrefresh.UseVisualStyleBackColor = false;
             this.btnrefresh.Click += new System.EventHandler(this.btnrefresh_Click);
             // 
             // comboitems
@@ -129,7 +131,7 @@
             this.paneltools.Controls.Add(this.lblcolumn);
             this.paneltools.Controls.Add(this.txtitems);
             this.paneltools.Controls.Add(this.comboitems);
-            this.paneltools.Location = new System.Drawing.Point(298, 414);
+            this.paneltools.Location = new System.Drawing.Point(285, 305);
             this.paneltools.Name = "paneltools";
             this.paneltools.Size = new System.Drawing.Size(367, 92);
             this.paneltools.TabIndex = 7;
@@ -138,8 +140,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(868, 536);
+            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.ClientSize = new System.Drawing.Size(868, 411);
             this.Controls.Add(this.paneltools);
             this.Controls.Add(this.btnrefresh);
             this.Controls.Add(this.booksdata);

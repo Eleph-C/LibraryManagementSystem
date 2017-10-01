@@ -39,23 +39,7 @@ namespace end
             groupBox1.Parent = pictureBox1;
             this.datasource = _datasource;
         }
-
-        public user()
-        {
-            // TODO: Complete member initialization
-        }
-
        
-        public void showdata()
-        {
-            kitap = new Kitap();
-            kitap.Booksdata = booksdata;
-            kitap.Booksdata2 = booksdata;
-            kitap.KutuphaneyeKitapGetir();
-            //Veritabani.KitapGetir(booksdata);
-        }
-
-
         private void btnchangepass_Click(object sender, EventArgs e)
         {
             panelbooks.Hide();

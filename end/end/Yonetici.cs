@@ -108,6 +108,18 @@ namespace end
             KutuphaneAdmini.Close();
             return check;
         }
+        public bool KutuphaneAdminiAdlaDuzenle()
+        {
+            bool check = false;
+            KutuphaneAdmini.Open();
+            OleDbCommand komut = new OleDbCommand("UPDATE Admin SET AdminSifre = '" + adminsifre + "' WHERE AdminEmail = '" + adminemail + "'", KutuphaneAdmini);
+            if (komut.ExecuteNonQuery() > 0)
+            {
+                check = true;
+            }
+            KutuphaneAdmini.Close();
+            return check;
+        }
         public bool KutuphaneAdminiSil()
         {
             bool check = false;

@@ -122,7 +122,7 @@
             this.groupBox2.Controls.Add(this.lblnewpass);
             this.groupBox2.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox2.Location = new System.Drawing.Point(203, 86);
+            this.groupBox2.Location = new System.Drawing.Point(31, 26);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(342, 296);
             this.groupBox2.TabIndex = 1;
@@ -204,7 +204,7 @@
             this.panelchangepass.Controls.Add(this.groupBox2);
             this.panelchangepass.Location = new System.Drawing.Point(165, 86);
             this.panelchangepass.Name = "panelchangepass";
-            this.panelchangepass.Size = new System.Drawing.Size(692, 477);
+            this.panelchangepass.Size = new System.Drawing.Size(437, 379);
             this.panelchangepass.TabIndex = 2;
             // 
             // panelbooks
@@ -214,13 +214,13 @@
             this.panelbooks.Controls.Add(this.lbltakenbooks);
             this.panelbooks.Location = new System.Drawing.Point(165, 86);
             this.panelbooks.Name = "panelbooks";
-            this.panelbooks.Size = new System.Drawing.Size(692, 477);
+            this.panelbooks.Size = new System.Drawing.Size(437, 379);
             this.panelbooks.TabIndex = 3;
             // 
             // btnresfresh
             // 
             this.btnresfresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnresfresh.Location = new System.Drawing.Point(614, 370);
+            this.btnresfresh.Location = new System.Drawing.Point(359, 278);
             this.btnresfresh.Name = "btnresfresh";
             this.btnresfresh.Size = new System.Drawing.Size(75, 23);
             this.btnresfresh.TabIndex = 6;
@@ -232,7 +232,7 @@
             this.booksdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.booksdata.Location = new System.Drawing.Point(3, 103);
             this.booksdata.Name = "booksdata";
-            this.booksdata.Size = new System.Drawing.Size(686, 261);
+            this.booksdata.Size = new System.Drawing.Size(431, 150);
             this.booksdata.TabIndex = 7;
             // 
             // lbltakenbooks
@@ -253,7 +253,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(871, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(640, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -301,7 +301,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(871, 584);
+            this.pictureBox1.Size = new System.Drawing.Size(640, 502);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -332,7 +332,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 584);
+            this.ClientSize = new System.Drawing.Size(640, 502);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);

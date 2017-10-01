@@ -182,7 +182,7 @@ namespace end
         {
             bool check = false;
             Kutuphane.Open();
-            OleDbCommand komut = new OleDbCommand("UPDATE Kitap SET KitapSahibi='" + kitabioduncalankisi + "',UyeyeVerilisTarihi ='" + kisiyeveriliszamani + "',UyedenAlinisTarihi = '" + kisidenaliniszamani + "' where KitapAdi='" + kitapadi + "'", Kutuphane);
+            OleDbCommand komut = new OleDbCommand("UPDATE Kitap SET KitabinVerildigiKisi='" + kitabioduncalankisi + "',UyeyeVerilisTarihi ='" + kisiyeveriliszamani + "',UyedenAlinisTarihi = '" + kisidenaliniszamani + "' where KitapAdi='" + kitapadi + "'", Kutuphane);
             if (komut.ExecuteNonQuery() > 0)
             {
                 check = true;
@@ -210,7 +210,7 @@ namespace end
         {
             bool check = false;
             Kutuphane.Open();
-            OleDbCommand komut = new OleDbCommand("SELECT * FROM Kitap WHERE KitapSahibi = '" + kelimeara + "'", Kutuphane);
+            OleDbCommand komut = new OleDbCommand("SELECT * FROM Kitap WHERE KitabinVerildigiKisi = '" + kelimeara + "'", Kutuphane);
             OleDbDataAdapter adapter = new OleDbDataAdapter(komut);
             if (komut.ExecuteNonQuery() > 0)
             {
