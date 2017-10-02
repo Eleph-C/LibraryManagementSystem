@@ -149,6 +149,7 @@ namespace end
             {
                 check = true;
             }
+            else { MessageBox.Show("Bir Sorun Olustu"); }
             Kutuphane.Close();
             return check;
             //KitapEkle(kitapnumarasi, kitapadi, kitapyazari, kitapsayfasayisi, kitapkategori, kitapyayincisi, kitaptercumani, kitapyayinlanmatarihi);

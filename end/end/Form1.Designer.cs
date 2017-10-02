@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fILEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bOOKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +40,7 @@
             this.cHECKINOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nEWADMINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tHEBOOKLISTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.sIGNOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hELPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -183,6 +184,7 @@
             this.cHECKINOUTToolStripMenuItem,
             this.nEWADMINToolStripMenuItem,
             this.tHEBOOKLISTToolStripMenuItem,
+            this.toolStripMenuItem2,
             this.sIGNOUTToolStripMenuItem});
             this.fILEToolStripMenuItem.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.fILEToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -194,43 +196,48 @@
             // bOOKToolStripMenuItem
             // 
             this.bOOKToolStripMenuItem.Name = "bOOKToolStripMenuItem";
-            this.bOOKToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.bOOKToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
             this.bOOKToolStripMenuItem.Text = "Kitap";
             this.bOOKToolStripMenuItem.Click += new System.EventHandler(this.bOOKToolStripMenuItem_Click);
             // 
             // mEMBERToolStripMenuItem
             // 
             this.mEMBERToolStripMenuItem.Name = "mEMBERToolStripMenuItem";
-            this.mEMBERToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.mEMBERToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
             this.mEMBERToolStripMenuItem.Text = "Uye";
             this.mEMBERToolStripMenuItem.Click += new System.EventHandler(this.mEMBERToolStripMenuItem_Click);
             // 
             // cHECKINOUTToolStripMenuItem
             // 
             this.cHECKINOUTToolStripMenuItem.Name = "cHECKINOUTToolStripMenuItem";
-            this.cHECKINOUTToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.cHECKINOUTToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
             this.cHECKINOUTToolStripMenuItem.Text = "Check In/Out";
             this.cHECKINOUTToolStripMenuItem.Click += new System.EventHandler(this.cHECKINOUTToolStripMenuItem_Click);
             // 
             // nEWADMINToolStripMenuItem
             // 
             this.nEWADMINToolStripMenuItem.Name = "nEWADMINToolStripMenuItem";
-            this.nEWADMINToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.nEWADMINToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
             this.nEWADMINToolStripMenuItem.Text = "Yonetici";
             this.nEWADMINToolStripMenuItem.Click += new System.EventHandler(this.nEWADMINToolStripMenuItem_Click);
             // 
             // tHEBOOKLISTToolStripMenuItem
             // 
             this.tHEBOOKLISTToolStripMenuItem.Name = "tHEBOOKLISTToolStripMenuItem";
-            this.tHEBOOKLISTToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
+            this.tHEBOOKLISTToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
             this.tHEBOOKLISTToolStripMenuItem.Text = "Kitap Listesi";
             this.tHEBOOKLISTToolStripMenuItem.Click += new System.EventHandler(this.tHEBOOKLISTToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(174, 6);
             // 
             // sIGNOUTToolStripMenuItem
             // 
             this.sIGNOUTToolStripMenuItem.Name = "sIGNOUTToolStripMenuItem";
-            this.sIGNOUTToolStripMenuItem.Size = new System.Drawing.Size(181, 24);
-            this.sIGNOUTToolStripMenuItem.Text = "Programi Kapat";
+            this.sIGNOUTToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
+            this.sIGNOUTToolStripMenuItem.Text = "Oturumu Kapat";
             this.sIGNOUTToolStripMenuItem.Click += new System.EventHandler(this.sIGNOUTToolStripMenuItem_Click);
             // 
             // hELPToolStripMenuItem
@@ -259,6 +266,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.panelbooks);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -401,11 +409,11 @@
             // 
             // kitaplistesidata
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            this.kitaplistesidata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.kitaplistesidata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.kitaplistesidata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.kitaplistesidata.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.kitaplistesidata.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -812,8 +820,8 @@
             // 
             // memberlistesidata
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.LightBlue;
-            this.memberlistesidata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightBlue;
+            this.memberlistesidata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.memberlistesidata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.memberlistesidata.Location = new System.Drawing.Point(99, 274);
             this.memberlistesidata.Name = "memberlistesidata";
@@ -924,7 +932,8 @@
             this.checkbooknamelbl.AutoSize = true;
             this.checkbooknamelbl.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkbooknamelbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkbooknamelbl.Location = new System.Drawing.Point(3, 0);
+            this.checkbooknamelbl.Location = new System.Drawing.Point(3, 4);
+            this.checkbooknamelbl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 0);
             this.checkbooknamelbl.Name = "checkbooknamelbl";
             this.checkbooknamelbl.Size = new System.Drawing.Size(84, 20);
             this.checkbooknamelbl.TabIndex = 70;
@@ -951,7 +960,7 @@
             "KitapTercumani",
             "KitapYayinTarihi\t",
             "KitabinVerildigiKisi"});
-            this.comboBox1.Location = new System.Drawing.Point(208, 64);
+            this.comboBox1.Location = new System.Drawing.Point(213, 64);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(148, 27);
             this.comboBox1.TabIndex = 86;
@@ -969,30 +978,30 @@
             // lblcheckout
             // 
             this.lblcheckout.AutoSize = true;
-            this.lblcheckout.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblcheckout.Location = new System.Drawing.Point(504, 199);
+            this.lblcheckout.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblcheckout.Location = new System.Drawing.Point(474, 201);
             this.lblcheckout.Name = "lblcheckout";
-            this.lblcheckout.Size = new System.Drawing.Size(120, 17);
+            this.lblcheckout.Size = new System.Drawing.Size(148, 19);
             this.lblcheckout.TabIndex = 84;
             this.lblcheckout.Text = "Teslim Alinan Tarih :";
             // 
             // lbltakentime
             // 
             this.lbltakentime.AutoSize = true;
-            this.lbltakentime.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbltakentime.Location = new System.Drawing.Point(149, 197);
+            this.lbltakentime.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbltakentime.Location = new System.Drawing.Point(131, 197);
             this.lbltakentime.Name = "lbltakentime";
-            this.lbltakentime.Size = new System.Drawing.Size(93, 17);
+            this.lbltakentime.Size = new System.Drawing.Size(115, 19);
             this.lbltakentime.TabIndex = 82;
             this.lbltakentime.Text = "Alinacak Tarih :";
             // 
             // lblgiventime
             // 
             this.lblgiventime.AutoSize = true;
-            this.lblgiventime.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblgiventime.Location = new System.Drawing.Point(156, 172);
+            this.lblgiventime.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblgiventime.Location = new System.Drawing.Point(143, 172);
             this.lblgiventime.Name = "lblgiventime";
-            this.lblgiventime.Size = new System.Drawing.Size(85, 17);
+            this.lblgiventime.Size = new System.Drawing.Size(103, 19);
             this.lblgiventime.TabIndex = 81;
             this.lblgiventime.Text = "Verilen Tarih :";
             // 
@@ -1059,8 +1068,8 @@
             // 
             // kitaplistesidata2
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.LightBlue;
-            this.kitaplistesidata2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightBlue;
+            this.kitaplistesidata2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.kitaplistesidata2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kitaplistesidata2.Location = new System.Drawing.Point(5, 274);
             this.kitaplistesidata2.Name = "kitaplistesidata2";
@@ -1086,10 +1095,10 @@
             // 
             // txtcheckmembername
             // 
-            this.txtcheckmembername.Location = new System.Drawing.Point(321, 132);
+            this.txtcheckmembername.Location = new System.Drawing.Point(301, 132);
             this.txtcheckmembername.Multiline = true;
             this.txtcheckmembername.Name = "txtcheckmembername";
-            this.txtcheckmembername.Size = new System.Drawing.Size(168, 20);
+            this.txtcheckmembername.Size = new System.Drawing.Size(188, 20);
             this.txtcheckmembername.TabIndex = 88;
             // 
             // checkmembernamelbl
@@ -1097,7 +1106,7 @@
             this.checkmembernamelbl.AutoSize = true;
             this.checkmembernamelbl.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkmembernamelbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkmembernamelbl.Location = new System.Drawing.Point(220, 130);
+            this.checkmembernamelbl.Location = new System.Drawing.Point(210, 130);
             this.checkmembernamelbl.Name = "checkmembernamelbl";
             this.checkmembernamelbl.Size = new System.Drawing.Size(75, 20);
             this.checkmembernamelbl.TabIndex = 71;
@@ -1186,9 +1195,9 @@
             // 
             this.txtadminpass.Location = new System.Drawing.Point(387, 180);
             this.txtadminpass.Name = "txtadminpass";
+            this.txtadminpass.PasswordChar = '*';
             this.txtadminpass.Size = new System.Drawing.Size(277, 24);
             this.txtadminpass.TabIndex = 1;
-            this.txtadminpass.UseSystemPasswordChar = true;
             // 
             // label30
             // 
@@ -1409,9 +1418,9 @@
             // 
             // adminlistesidata
             // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.adminlistesidata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.adminlistesidata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.adminlistesidata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.adminlistesidata.Location = new System.Drawing.Point(120, 286);
             this.adminlistesidata.Name = "adminlistesidata";
@@ -1634,6 +1643,7 @@
         public System.Windows.Forms.TextBox txtadminname;
         private System.Windows.Forms.Label adminemaillbl;
         private System.Windows.Forms.Label adminnamelbl;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
     }
 }
 

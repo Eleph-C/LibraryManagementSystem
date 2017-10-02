@@ -33,7 +33,6 @@
             this.btnadminlog = new System.Windows.Forms.Button();
             this.btncanceladmin = new System.Windows.Forms.Button();
             this.linkLabellost2 = new System.Windows.Forms.LinkLabel();
-            this.txtyoneticisifre = new System.Windows.Forms.TextBox();
             this.txtyoneticiemail = new System.Windows.Forms.TextBox();
             this.lbladminpass = new System.Windows.Forms.Label();
             this.lbladminname = new System.Windows.Forms.Label();
@@ -50,10 +49,11 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.lbladminnewpassword = new System.Windows.Forms.Label();
             this.btnadminsavepass = new System.Windows.Forms.Button();
-            this.txtadminnewpass = new System.Windows.Forms.TextBox();
-            this.txtadminconfirmpass = new System.Windows.Forms.TextBox();
             this.lbladminconfirmpass = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtyoneticisifre = new System.Windows.Forms.TextBox();
+            this.txtadminnewpass = new System.Windows.Forms.TextBox();
+            this.txtadminconfirmpass = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -76,10 +76,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.tabPage1.Controls.Add(this.txtyoneticisifre);
             this.tabPage1.Controls.Add(this.btnadminlog);
             this.tabPage1.Controls.Add(this.btncanceladmin);
             this.tabPage1.Controls.Add(this.linkLabellost2);
-            this.tabPage1.Controls.Add(this.txtyoneticisifre);
             this.tabPage1.Controls.Add(this.txtyoneticiemail);
             this.tabPage1.Controls.Add(this.lbladminpass);
             this.tabPage1.Controls.Add(this.lbladminname);
@@ -129,15 +129,6 @@
             this.linkLabellost2.TabStop = true;
             this.linkLabellost2.Text = "Sifreni mi Unuttun ?";
             this.linkLabellost2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabellost2_LinkClicked);
-            // 
-            // txtyoneticisifre
-            // 
-            this.txtyoneticisifre.Location = new System.Drawing.Point(118, 85);
-            this.txtyoneticisifre.Multiline = true;
-            this.txtyoneticisifre.Name = "txtyoneticisifre";
-            this.txtyoneticisifre.Size = new System.Drawing.Size(193, 23);
-            this.txtyoneticisifre.TabIndex = 33;
-            this.txtyoneticisifre.UseSystemPasswordChar = true;
             // 
             // txtyoneticiemail
             // 
@@ -290,10 +281,10 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.LightSlateGray;
+            this.tabPage4.Controls.Add(this.txtadminconfirmpass);
+            this.tabPage4.Controls.Add(this.txtadminnewpass);
             this.tabPage4.Controls.Add(this.lbladminnewpassword);
             this.tabPage4.Controls.Add(this.btnadminsavepass);
-            this.tabPage4.Controls.Add(this.txtadminnewpass);
-            this.tabPage4.Controls.Add(this.txtadminconfirmpass);
             this.tabPage4.Controls.Add(this.lbladminconfirmpass);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -327,22 +318,6 @@
             this.btnadminsavepass.UseVisualStyleBackColor = true;
             this.btnadminsavepass.Click += new System.EventHandler(this.btnadminsavepass_Click);
             // 
-            // txtadminnewpass
-            // 
-            this.txtadminnewpass.Location = new System.Drawing.Point(149, 24);
-            this.txtadminnewpass.Multiline = true;
-            this.txtadminnewpass.Name = "txtadminnewpass";
-            this.txtadminnewpass.Size = new System.Drawing.Size(171, 23);
-            this.txtadminnewpass.TabIndex = 31;
-            // 
-            // txtadminconfirmpass
-            // 
-            this.txtadminconfirmpass.Location = new System.Drawing.Point(149, 69);
-            this.txtadminconfirmpass.Multiline = true;
-            this.txtadminconfirmpass.Name = "txtadminconfirmpass";
-            this.txtadminconfirmpass.Size = new System.Drawing.Size(171, 23);
-            this.txtadminconfirmpass.TabIndex = 32;
-            // 
             // lbladminconfirmpass
             // 
             this.lbladminconfirmpass.AutoSize = true;
@@ -362,6 +337,31 @@
             this.panel1.Size = new System.Drawing.Size(377, 23);
             this.panel1.TabIndex = 34;
             // 
+            // txtyoneticisifre
+            // 
+            this.txtyoneticisifre.Location = new System.Drawing.Point(118, 86);
+            this.txtyoneticisifre.Multiline = true;
+            this.txtyoneticisifre.Name = "txtyoneticisifre";
+            this.txtyoneticisifre.PasswordChar = '*';
+            this.txtyoneticisifre.Size = new System.Drawing.Size(193, 23);
+            this.txtyoneticisifre.TabIndex = 36;
+            // 
+            // txtadminnewpass
+            // 
+            this.txtadminnewpass.Location = new System.Drawing.Point(149, 27);
+            this.txtadminnewpass.Multiline = true;
+            this.txtadminnewpass.Name = "txtadminnewpass";
+            this.txtadminnewpass.Size = new System.Drawing.Size(171, 23);
+            this.txtadminnewpass.TabIndex = 34;
+            // 
+            // txtadminconfirmpass
+            // 
+            this.txtadminconfirmpass.Location = new System.Drawing.Point(149, 69);
+            this.txtadminconfirmpass.Multiline = true;
+            this.txtadminconfirmpass.Name = "txtadminconfirmpass";
+            this.txtadminconfirmpass.Size = new System.Drawing.Size(171, 23);
+            this.txtadminconfirmpass.TabIndex = 35;
+            // 
             // AdminGirisFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,6 +372,7 @@
             this.Name = "AdminGirisFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Giris Formu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminGirisFormu_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -393,7 +394,6 @@
         private System.Windows.Forms.Button btnadminlog;
         private System.Windows.Forms.Button btncanceladmin;
         private System.Windows.Forms.LinkLabel linkLabellost2;
-        private System.Windows.Forms.TextBox txtyoneticisifre;
         private System.Windows.Forms.TextBox txtyoneticiemail;
         private System.Windows.Forms.Label lbladminpass;
         private System.Windows.Forms.Label lbladminname;
@@ -409,9 +409,10 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label lbladminnewpassword;
         private System.Windows.Forms.Button btnadminsavepass;
-        private System.Windows.Forms.TextBox txtadminnewpass;
-        private System.Windows.Forms.TextBox txtadminconfirmpass;
         private System.Windows.Forms.Label lbladminconfirmpass;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtyoneticisifre;
+        private System.Windows.Forms.TextBox txtadminconfirmpass;
+        private System.Windows.Forms.TextBox txtadminnewpass;
     }
 }

@@ -33,7 +33,6 @@
             this.btnuserlog = new System.Windows.Forms.Button();
             this.btnusercancel = new System.Windows.Forms.Button();
             this.linkLabellost = new System.Windows.Forms.LinkLabel();
-            this.txtkullanicisifre = new System.Windows.Forms.TextBox();
             this.txtkullaniciemail = new System.Windows.Forms.TextBox();
             this.lbluserpass = new System.Windows.Forms.Label();
             this.lblusername = new System.Windows.Forms.Label();
@@ -50,10 +49,11 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.lblnewpassworduser = new System.Windows.Forms.Label();
             this.btnusersavepass = new System.Windows.Forms.Button();
-            this.txtnewpassworduser = new System.Windows.Forms.TextBox();
-            this.txtconfrmpassuser = new System.Windows.Forms.TextBox();
             this.lblconfrmpassuser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtkullanicisifre = new System.Windows.Forms.TextBox();
+            this.txtnewpassworduser = new System.Windows.Forms.TextBox();
+            this.txtconfrmpassuser = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -76,10 +76,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.tabPage1.Controls.Add(this.txtkullanicisifre);
             this.tabPage1.Controls.Add(this.btnuserlog);
             this.tabPage1.Controls.Add(this.btnusercancel);
             this.tabPage1.Controls.Add(this.linkLabellost);
-            this.tabPage1.Controls.Add(this.txtkullanicisifre);
             this.tabPage1.Controls.Add(this.txtkullaniciemail);
             this.tabPage1.Controls.Add(this.lbluserpass);
             this.tabPage1.Controls.Add(this.lblusername);
@@ -129,15 +129,6 @@
             this.linkLabellost.TabStop = true;
             this.linkLabellost.Text = "Sifreni mi Unuttun ?";
             this.linkLabellost.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabellost_LinkClicked);
-            // 
-            // txtkullanicisifre
-            // 
-            this.txtkullanicisifre.Location = new System.Drawing.Point(111, 82);
-            this.txtkullanicisifre.Multiline = true;
-            this.txtkullanicisifre.Name = "txtkullanicisifre";
-            this.txtkullanicisifre.Size = new System.Drawing.Size(205, 23);
-            this.txtkullanicisifre.TabIndex = 33;
-            this.txtkullanicisifre.UseSystemPasswordChar = true;
             // 
             // txtkullaniciemail
             // 
@@ -290,10 +281,10 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.LightSlateGray;
+            this.tabPage4.Controls.Add(this.txtconfrmpassuser);
+            this.tabPage4.Controls.Add(this.txtnewpassworduser);
             this.tabPage4.Controls.Add(this.lblnewpassworduser);
             this.tabPage4.Controls.Add(this.btnusersavepass);
-            this.tabPage4.Controls.Add(this.txtnewpassworduser);
-            this.tabPage4.Controls.Add(this.txtconfrmpassuser);
             this.tabPage4.Controls.Add(this.lblconfrmpassuser);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -327,22 +318,6 @@
             this.btnusersavepass.UseVisualStyleBackColor = true;
             this.btnusersavepass.Click += new System.EventHandler(this.btnusersavepass_Click);
             // 
-            // txtnewpassworduser
-            // 
-            this.txtnewpassworduser.Location = new System.Drawing.Point(141, 42);
-            this.txtnewpassworduser.Multiline = true;
-            this.txtnewpassworduser.Name = "txtnewpassworduser";
-            this.txtnewpassworduser.Size = new System.Drawing.Size(170, 23);
-            this.txtnewpassworduser.TabIndex = 16;
-            // 
-            // txtconfrmpassuser
-            // 
-            this.txtconfrmpassuser.Location = new System.Drawing.Point(141, 89);
-            this.txtconfrmpassuser.Multiline = true;
-            this.txtconfrmpassuser.Name = "txtconfrmpassuser";
-            this.txtconfrmpassuser.Size = new System.Drawing.Size(170, 23);
-            this.txtconfrmpassuser.TabIndex = 17;
-            // 
             // lblconfrmpassuser
             // 
             this.lblconfrmpassuser.AutoSize = true;
@@ -357,10 +332,35 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 23);
             this.panel1.TabIndex = 35;
+            // 
+            // txtkullanicisifre
+            // 
+            this.txtkullanicisifre.Location = new System.Drawing.Point(111, 82);
+            this.txtkullanicisifre.Multiline = true;
+            this.txtkullanicisifre.Name = "txtkullanicisifre";
+            this.txtkullanicisifre.PasswordChar = '*';
+            this.txtkullanicisifre.Size = new System.Drawing.Size(205, 23);
+            this.txtkullanicisifre.TabIndex = 37;
+            // 
+            // txtnewpassworduser
+            // 
+            this.txtnewpassworduser.Location = new System.Drawing.Point(141, 41);
+            this.txtnewpassworduser.Multiline = true;
+            this.txtnewpassworduser.Name = "txtnewpassworduser";
+            this.txtnewpassworduser.Size = new System.Drawing.Size(170, 23);
+            this.txtnewpassworduser.TabIndex = 19;
+            // 
+            // txtconfrmpassuser
+            // 
+            this.txtconfrmpassuser.Location = new System.Drawing.Point(141, 85);
+            this.txtconfrmpassuser.Multiline = true;
+            this.txtconfrmpassuser.Name = "txtconfrmpassuser";
+            this.txtconfrmpassuser.Size = new System.Drawing.Size(170, 23);
+            this.txtconfrmpassuser.TabIndex = 20;
             // 
             // UyeGirisFormu
             // 
@@ -372,6 +372,7 @@
             this.Name = "UyeGirisFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Uye Giris Formu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UyeGirisFormu_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -392,7 +393,6 @@
         private System.Windows.Forms.Button btnuserlog;
         private System.Windows.Forms.Button btnusercancel;
         private System.Windows.Forms.LinkLabel linkLabellost;
-        private System.Windows.Forms.TextBox txtkullanicisifre;
         public System.Windows.Forms.TextBox txtkullaniciemail;
         private System.Windows.Forms.Label lbluserpass;
         private System.Windows.Forms.Label lblusername;
@@ -409,10 +409,11 @@
         private System.Windows.Forms.Label lblsendeduser;
         private System.Windows.Forms.Label lblnewpassworduser;
         private System.Windows.Forms.Button btnusersavepass;
-        private System.Windows.Forms.TextBox txtnewpassworduser;
-        private System.Windows.Forms.TextBox txtconfrmpassuser;
         private System.Windows.Forms.Label lblconfrmpassuser;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtkullanicisifre;
+        private System.Windows.Forms.TextBox txtconfrmpassuser;
+        private System.Windows.Forms.TextBox txtnewpassworduser;
 
     }
 }

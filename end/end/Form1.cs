@@ -33,9 +33,9 @@ namespace end
         private void Form1_Load(object sender, EventArgs e)
         {
             showdatakitap();
+            menuStrip1.Renderer = new MyRenderer();
         }
         
-        veritabani Veritabani = new veritabani();
         public void showdatakitap()
         {
             kitap = new Kitap();
@@ -77,37 +77,49 @@ namespace end
         
         private void adnbtn1_Click(object sender, EventArgs e)
         {
-            if (txtbookname.Text != "" && txtbooknumber.Text != "")
-            {  
-                kitap = new Kitap();
-                kitap.KitapNumarasi = Convert.ToInt32(txtbooknumber.Text);
-                kitap.KitapAdi = txtbookname.Text;
-                kitap.KitapYazari = txtbookauthor.Text;
-                kitap.KitapSayfaSayisi = Convert.ToInt32(txtbookpage.Text);
-                kitap.KitapKategori = combobookcategory.Text;
-                kitap.KitapYayincisi = txtbookpublisher.Text;
-                kitap.KitapTercumani = txtbooktranslated.Text;
-                kitap.KitapYayinlanmaTarihi = Convert.ToInt32(txtbookdate.Text);
-                kitap.KitabiOduncAlanKisi = "";
-                kitap.KisiyeVerilisZamani = "";
-                kitap.KisidenAlinisZamani = "";
-                if (kitap.KutuphaneyeKitapEkle())
+            for (int i = 0; i < kitaplistesidata.Rows.Count; i++)
+            {
+                if (kitaplistesidata.Rows[i].Cells[0].ToString().Contains(txtbooknumber.Text))
                 {
-                    MessageBox.Show("Kitap Kayit Edildi");
+                    MessageBox.Show("Ayni numaradan zaten var");
                 }
-                //Veritabani.KitapEkle(kitapnumarasi, txtbookname.Text, txtbookauthor.Text, bookpage, combobookcategory.Text, txtbookpublisher.Text, txtbooktranslated.Text, kitapyayintarihi);
-                showdatakitap();
-                txtbooknumber.Text = "";
-                txtbookname.Text = "";
-                txtbookauthor.Text = "";
-                txtbookpage.Text = "";
-                txtbooktranslated.Text = "";
-                txtbookpublisher.Text = "";
-                combobookcategory.Text = "";
-                txtbookdate.Text = "";
+                else
+                {
+                    if (txtbookname.Text != "" && txtbooknumber.Text != "")
+                    {
+                        kitap = new Kitap();
+                        kitap.KitapNumarasi = Convert.ToInt32(txtbooknumber.Text);
+                        kitap.KitapAdi = txtbookname.Text;
+                        kitap.KitapYazari = txtbookauthor.Text;
+                        kitap.KitapSayfaSayisi = Convert.ToInt32(txtbookpage.Text);
+                        kitap.KitapKategori = combobookcategory.Text;
+                        kitap.KitapYayincisi = txtbookpublisher.Text;
+                        kitap.KitapTercumani = txtbooktranslated.Text;
+                        kitap.KitapYayinlanmaTarihi = Convert.ToInt32(txtbookdate.Text);
+                        kitap.KitabiOduncAlanKisi = "";
+                        kitap.KisiyeVerilisZamani = "";
+                        kitap.KisidenAlinisZamani = "";
+                        if (kitap.KutuphaneyeKitapEkle())
+                        {
+                            MessageBox.Show("Kitap Kayit Edildi");
+                        }
+                        //Veritabani.KitapEkle(kitapnumarasi, txtbookname.Text, txtbookauthor.Text, bookpage, combobookcategory.Text, txtbookpublisher.Text, txtbooktranslated.Text, kitapyayintarihi);
+                        showdatakitap();
+                        txtbooknumber.Text = "";
+                        txtbookname.Text = "";
+                        txtbookauthor.Text = "";
+                        txtbookpage.Text = "";
+                        txtbooktranslated.Text = "";
+                        txtbookpublisher.Text = "";
+                        combobookcategory.Text = "";
+                        txtbookdate.Text = "";
+                    }
+                    else
+                        MessageBox.Show("Book Name or Barkod is Empty !");
+                }
             }
-            else
-                MessageBox.Show("Book Name or Barkod is Empty !");
+
+            
         }
 
         private void deletebtn1_Click(object sender, EventArgs e)
@@ -719,11 +731,41 @@ namespace end
             else
                 MessageBox.Show("Bir seyler yanlis gitti", "Uyari!");
         }
+        private class MyRenderer : ToolStripProfessionalRenderer
+        {
+            public MyRenderer() : base(new MyColor()) { }
+        }
+        private class MyColor : ProfessionalColorTable
+        {
+            public override Color MenuItemSelected///mouse uzerine geldiginde
+            {
+                get { return Color.LightSlateGray; }
+            }
+            public override Color MenuItemSelectedGradientBegin
+            {
+                get { return Color.Silver; }
+            }
+            public override Color MenuItemSelectedGradientEnd
+            {
+                get { return Color.SlateGray; }
+            }
+            public override Color MenuItemBorder///border cerceve
+            {
+                get { return Color.DimGray; }
+            }
+            public override Color MenuItemPressedGradientBegin
+            {
+                get { return Color.SlateGray; }
+            }
+            public override Color MenuItemPressedGradientEnd
+            {
+                get { return Color.Silver; }
+            }
 
+        }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
-  
     }
 }

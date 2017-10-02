@@ -105,11 +105,16 @@ namespace end
         {
             login login = new login();
             login.Show();
-            this.Close();
+            this.Hide();
         }
         private void linkLabellost2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             tabControl1.SelectTab(1);
+        }
+
+        private void AdminGirisFormu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

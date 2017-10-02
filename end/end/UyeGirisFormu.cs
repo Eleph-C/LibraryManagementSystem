@@ -38,7 +38,7 @@ namespace end
         {
             login login = new login();
             login.Show();
-            this.Close();
+            this.Hide();
         }
         private void linkLabellost_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -113,6 +113,11 @@ namespace end
             {
                 MessageBox.Show("Dogru Degerler Girilmedi");
             }
+        }
+
+        private void UyeGirisFormu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
