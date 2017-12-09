@@ -246,7 +246,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(640, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(640, 25);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -257,40 +257,44 @@
             this.borrowedBooksToolStripMenuItem,
             this.toolStripMenuItem2,
             this.signOutToolStripMenuItem});
+            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
             this.fileToolStripMenuItem.Text = "Dosya";
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.changePasswordToolStripMenuItem.Text = "Sifre Degis";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // borrowedBooksToolStripMenuItem
             // 
             this.borrowedBooksToolStripMenuItem.Name = "borrowedBooksToolStripMenuItem";
-            this.borrowedBooksToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.borrowedBooksToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.borrowedBooksToolStripMenuItem.Text = "Sahip Olunan Kitaplar";
             this.borrowedBooksToolStripMenuItem.Click += new System.EventHandler(this.borrowedBooksToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(185, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(199, 6);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.signOutToolStripMenuItem.Text = "Oturumu Kapat";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
             this.helpToolStripMenuItem.Text = "Yardim";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
